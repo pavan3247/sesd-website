@@ -39,25 +39,30 @@
 
 ---
 
-## 4. Quick Start & Local Execution
+## 4. Quick Start & Deployment
 
-### Prerequisites
-- Node.js 18 or higher installed on your system.
+### Option A: 1-Click Deployment on Vercel 🚀
+This repository is 100% **Vercel-ready** with pre-configured serverless Express routing (`vercel.json` + `api/index.js`):
+1. Go to [vercel.com/new](https://vercel.com/new) and log in with your GitHub account.
+2. Select and import the repository: **`pavan3247/sesd-website`**.
+3. Keep all default settings (Framework Preset: **Other**, Root Directory: `./`).
+4. Click **Deploy**!
+   - Vercel automatically deploys the frontend static pages.
+   - The Express REST API runs serverlessly via `api/index.js`.
+   - Your live website will be accessible immediately at `https://<your-project>.vercel.app`.
 
-### Steps to Run:
+### Option B: Local Execution with Node.js
+```bash
+# 1. Clone or navigate to the repository
+cd FITZONE
 
-1. **Navigate to the Backend Directory:**
-   ```bash
-   cd FITZONE/backend
-   ```
+# 2. Install dependencies
+npm install
 
-2. **Install Dependencies (if not already installed):**
-   ```bash
-   npm install
-   ```
-
-3. **Start the FITZONE Server:**
-   ```bash
+# 3. Start the server
+npm start
+```
+Open **[http://localhost:5000](http://localhost:5000)** in your browser!
    npm start
    ```
 

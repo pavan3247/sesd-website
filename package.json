@@ -1,0 +1,17 @@
+{
+  "name": "fitzone-gym-management-system",
+  "version": "1.0.0",
+  "description": "FITZONE - Gym Membership Management System (GMMS) - Vercel & Node.js Ready",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "build": "echo 'Vercel build complete'"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  },
+  "engines": {
+    "node": ">=18.x"
+  }
+}
