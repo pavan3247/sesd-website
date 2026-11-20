@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'secondary': '#adc6ff', 'on-surface-variant': '#e4beb2', 'outline-variant': '#5b4138', 'primary': '#ffb59b', 'primary-fixed': '#ffdbcf', 'on-secondary-fixed': '#001a42', 'primary-fixed-dim': '#ffb59b', 'on-surface': '#e1e2eb', 'on-tertiary-fixed': '#002113', 'inverse-primary': '#a93800', 'surface-container-highest': '#32353c', 'error-container': '#93000a', 'primary-container': '#ff5e14', 'surface': '#10131a', 'on-tertiary-container': '#003421', 'on-primary': '#5b1a00', 'on-error': '#690005', 'on-secondary-container': '#e6ecff', 'on-primary-fixed-variant': '#812900', 'tertiary-container': '#00a874', 'error': '#ffb4ab', 'surface-variant': '#32353c', 'surface-container-high': '#272a31', 'surface-tint': '#ffb59b', 'on-background': '#e1e2eb', 'on-secondary-fixed-variant': '#004395', 'on-tertiary': '#003824', 'on-primary-fixed': '#380d00', 'surface-container-low': '#191c22', 'surface-bright': '#363940', 'on-secondary': '#002e6a', 'secondary-fixed': '#d8e2ff', 'inverse-surface': '#e1e2eb', 'tertiary-fixed-dim': '#4edea3', 'on-error-container': '#ffdad6', 'surface-container-lowest': '#0b0e14', 'secondary-container': '#0566d9', 'on-primary-container': '#541800', 'surface-dim': '#10131a', 'inverse-on-surface': '#2e3037', 'secondary-fixed-dim': '#adc6ff', 'tertiary': '#4edea3', 'background': '#10131a', 'tertiary-fixed': '#6ffbbe', 'surface-container': '#1d2026', 'on-tertiary-fixed-variant': '#005236', 'outline': '#aa897e' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, 'spacing': { 'gutter-mobile': '0.75rem', 'space-md': '1rem', 'space-sm': '0.5rem', 'space-lg': '1.5rem', 'space-xl': '2rem', 'margin': '2rem', 'gutter': '1.5rem', 'margin-mobile': '1rem', 'space-xs': '0.25rem' }, 'fontFamily': { 'body-lg': ['Inter'], 'headline-lg-mobile': ['Outfit'], 'title-md': ['Outfit'], 'metric-display': ['Outfit'], 'body-sm': ['Inter'], 'headline-sm': ['Outfit'], 'label-sm': ['Inter'], 'headline-xl': ['Outfit'], 'title-sm': ['Outfit'], 'label-md': ['Inter'], 'headline-lg': ['Outfit'], 'headline-md': ['Outfit'], 'headline-xl-mobile': ['Outfit'], 'body-md': ['Inter'] }, 'fontSize': { 'body-lg': ['16px', { 'lineHeight': '24px', 'fontWeight': '400' }], 'headline-lg-mobile': ['24px', { 'lineHeight': '32px', 'fontWeight': '700' }], 'title-md': ['16px', { 'lineHeight': '24px', 'fontWeight': '600' }], 'metric-display': ['36px', { 'lineHeight': '42px', 'fontWeight': '700' }], 'body-sm': ['12px', { 'lineHeight': '16px', 'fontWeight': '400' }], 'headline-sm': ['20px', { 'lineHeight': '28px', 'fontWeight': '600' }], 'label-sm': ['11px', { 'lineHeight': '14px', 'fontWeight': '600' }], 'headline-xl': ['40px', { 'lineHeight': '48px', 'fontWeight': '700' }], 'title-sm': ['14px', { 'lineHeight': '20px', 'fontWeight': '600' }], 'label-md': ['13px', { 'lineHeight': '18px', 'fontWeight': '500' }], 'headline-lg': ['32px', { 'lineHeight': '40px', 'fontWeight': '700' }], 'headline-md': ['24px', { 'lineHeight': '32px', 'fontWeight': '600' }], 'headline-xl-mobile': ['30px', { 'lineHeight': '38px', 'fontWeight': '700' }], 'body-md': ['14px', { 'lineHeight': '20px', 'fontWeight': '400' }] } } } };</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container"><img alt="IronPulse Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDIshoVC9a0DHkA4rgXFfX5NZiG8ktDfWniXjXpIgdrxPEimTnAXPp2Am2dLwRtdF7CgZ93K3MAHg0623_Ee9SY1x-jkZKD8F142uqPRVXUpNtq-bSnZ86XgpDvHrW-HBjN6u3X8RGndguCFsY9vjVkSwn_q8jjwD3aqCL6DKl5YgX56atBF_5J1JDj9yFakROrmT6VVruMwz9QLw4hL8WKJbNHxFu7xgJxZUoyd-Bo"/><div class="flex flex-col"><span class="font-title-sm text-title-sm text-on-surface tracking-wide uppercase">IronPulse</span><span class="font-label-sm text-label-sm text-outline-variant tracking-wider uppercase">GYM MANAGEMENT OS</span></div></div><div class="px-space-md pt-space-lg pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Core Operations</span></div><nav class="px-space-xs flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-bold shadow-[inset_3px_0_0_0_#ff5e14]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="font-title-sm text-title-sm">Dashboard</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="members" href="#"><span class="font-title-sm text-title-sm">Members</span><span class="px-space-sm py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">1,420</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="memberships" href="#"><span class="font-title-sm text-title-sm">Memberships</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="trainers" href="#"><span class="font-title-sm text-title-sm">Trainers</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="attendance" href="#"><span class="font-title-sm text-title-sm">Attendance</span><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="payments" href="#"><span class="font-title-sm text-title-sm">Payments</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="workout-plans" href="#"><span class="font-title-sm text-title-sm">Workout Plans</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="font-title-sm text-title-sm">Settings</span></a></nav></div><div class="p-space-md bg-surface-container flex flex-col gap-space-md"><div class="bg-surface-container-high p-space-sm rounded-lg"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Club Capacity</span><span class="font-label-sm text-label-sm text-tertiary font-bold">74%</span></div><div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden mb-space-xs"><div class="h-full bg-primary-container rounded-full" style="width: 74%"></div></div><div class="flex items-center justify-between"><span class="font-body-sm text-body-sm text-on-surface">148 / 200 Inside</span><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></div></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs text-on-surface-variant hover:text-error transition-colors rounded-lg" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-title-sm text-title-sm">Sign Out</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-low/95 backdrop-blur-xl z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><img alt="IronPulse Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDIshoVC9a0DHkA4rgXFfX5NZiG8ktDfWniXjXpIgdrxPEimTnAXPp2Am2dLwRtdF7CgZ93K3MAHg0623_Ee9SY1x-jkZKD8F142uqPRVXUpNtq-bSnZ86XgpDvHrW-HBjN6u3X8RGndguCFsY9vjVkSwn_q8jjwD3aqCL6DKl5YgX56atBF_5J1JDj9yFakROrmT6VVruMwz9QLw4hL8WKJbNHxFu7xgJxZUoyd-Bo"/><div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-xs rounded-lg w-80 text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">search</span><input class="bg-transparent w-full border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline-variant" placeholder="Search athlete, RFID, plan..." type="text"/><kbd class="font-label-sm text-label-sm bg-surface-container px-space-xs py-0.5 rounded text-outline">⌘K</kbd></div></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container rounded-full"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface uppercase">Open • Peak Hours</span><span class="font-label-sm text-label-sm text-outline-variant">17:42</span></div><button class="flex items-center gap-space-xs px-space-md py-space-sm bg-primary-container text-on-primary-container hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-colors font-title-sm text-title-sm rounded-lg" type="button"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span>Check-in Member</span></button><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-primary-container text-on-primary-container font-label-sm text-[10px] leading-none rounded-full flex items-center justify-center font-bold">3</span></button><div class="flex items-center gap-space-sm pl-space-sm bg-surface-container py-1 px-space-sm rounded-lg"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-title-sm text-title-sm text-on-surface leading-tight">Marcus Vance</span><span class="font-label-sm text-label-sm text-outline-variant">General Manager</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface-container-lowest"><div class="flex flex-col w-full">
+<!-- Top Command & Action Bar -->
+<div class="px-margin pt-space-lg pb-space-md flex flex-col xl:flex-row xl:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-container/15 text-primary font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+          Athletic Conditioning &amp; Programming • Periodization Engine V2.4
+        </span>
+<span class="text-outline-variant font-label-sm text-label-sm">• Live Sync Active</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Workout Plans &amp; Regimens</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Design, assign, and monitor periodized strength, hypertrophy, and conditioning routines across enrolled athletes and trainers with biometric load tracking.
+      </p>
+</div>
+<!-- Global CTA Cluster -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors font-title-sm text-title-sm rounded-lg shadow-sm" id="open-library-btn">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+<span>Exercise Library</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors font-title-sm text-title-sm rounded-lg shadow-sm" id="import-regimen-btn">
+<span class="material-symbols-outlined text-[18px]">cloud_download</span>
+<span>Import Template</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container hover:text-on-primary-fixed transition-all font-title-sm text-title-sm rounded-lg shadow-[0_0_20px_rgba(255,94,20,0.35)]" id="create-plan-btn">
+<span class="material-symbols-outlined text-[18px] font-bold">add_circle</span>
+<span>Create Workout Plan</span>
+</button>
+</div>
+</div>
+<!-- Key Metrics Telemetry Strip -->
+<div class="px-margin py-space-md grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active Regimens</span>
+<div class="flex items-baseline gap-space-sm mt-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface font-bold tracking-tight">34</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-container/20 px-2 py-0.5 rounded-full">+4 this month</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">fitness_center</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span> 84% adherence rate
+        </span>
+<span class="text-outline">Target: 80%</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Athletes Enrolled</span>
+<div class="flex items-baseline gap-space-sm mt-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface font-bold tracking-tight">892</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold bg-secondary-container/20 px-2 py-0.5 rounded-full">68% custom roster</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">groups</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>+48 assigned past 7d</span>
+<span class="text-tertiary font-bold">↑ 5.2%</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Top Focus Area</span>
+<div class="flex items-baseline gap-space-sm mt-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Hypertrophy</span>
+<span class="font-label-sm text-label-sm text-primary font-bold bg-primary-container/20 px-2 py-0.5 rounded-full">42% volume</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">bolt</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>2nd: Functional Hyrox (28%)</span>
+<span class="text-outline">Mobile &amp; Posture (18%)</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-low shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Coaching Workload</span>
+<div class="flex items-baseline gap-space-sm mt-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface font-bold tracking-tight">18</span>
+<span class="font-label-sm text-label-sm text-on-surface font-medium bg-surface-container-highest px-2 py-0.5 rounded-full">Coaches active</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">sports</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>Avg 4.8 programs / coach</span>
+<span class="text-tertiary">Balanced</span>
+</div>
+</div>
+</div>
+<!-- Filtration & View Controller Bar -->
+<div class="px-margin py-space-md flex flex-col gap-space-md">
+<!-- Category Tabs -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-space-xs scrollbar-none" id="category-tabs">
+<button class="plan-filter-btn px-space-md py-space-xs rounded-lg font-title-sm text-title-sm bg-primary-container text-on-primary-container whitespace-nowrap transition-colors" data-category="all">
+        All Plans (34)
+      </button>
+<button class="plan-filter-btn px-space-md py-space-xs rounded-lg font-title-sm text-title-sm bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high whitespace-nowrap transition-colors" data-category="strength">
+        Strength &amp; Power (12)
+      </button>
+<button class="plan-filter-btn px-space-md py-space-xs rounded-lg font-title-sm text-title-sm bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high whitespace-nowrap transition-colors" data-category="hypertrophy">
+        Hypertrophy (9)
+      </button>
+<button class="plan-filter-btn px-space-md py-space-xs rounded-lg font-title-sm text-title-sm bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high whitespace-nowrap transition-colors" data-category="endurance">
+        Endurance &amp; Hyrox (8)
+      </button>
+<button class="plan-filter-btn px-space-md py-space-xs rounded-lg font-title-sm text-title-sm bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high whitespace-nowrap transition-colors" data-category="rehab">
+        Rehab &amp; Mobility (5)
+      </button>
+</div>
+<!-- Search & Dynamic Select Filters -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex flex-col lg:flex-row items-center justify-between gap-space-sm">
+<!-- Search Input -->
+<div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-xs rounded-lg w-full lg:w-96 text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">search</span>
+<input class="bg-transparent w-full border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline-variant" id="plan-search-input" placeholder="Search workout plan, exercise, coach, or member..." type="text"/>
+<kbd class="font-label-sm text-label-sm bg-surface-container px-space-xs py-0.5 rounded text-outline">⌘K</kbd>
+</div>
+<!-- Filters Cluster -->
+<div class="flex items-center flex-wrap gap-space-sm w-full lg:w-auto justify-end">
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1.5 rounded-lg text-on-surface">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase">Difficulty:</span>
+<select class="bg-transparent font-title-sm text-title-sm text-on-surface outline-none cursor-pointer" id="filter-difficulty">
+<option class="bg-surface-container-high text-on-surface" value="all">All Levels</option>
+<option class="bg-surface-container-high text-on-surface" value="Beginner">Beginner</option>
+<option class="bg-surface-container-high text-on-surface" value="Intermediate">Intermediate</option>
+<option class="bg-surface-container-high text-on-surface" value="Advanced">Advanced</option>
+<option class="bg-surface-container-high text-on-surface" value="Elite Pro">Elite Pro</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1.5 rounded-lg text-on-surface">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase">Coach:</span>
+<select class="bg-transparent font-title-sm text-title-sm text-on-surface outline-none cursor-pointer" id="filter-coach">
+<option class="bg-surface-container-high text-on-surface" value="all">All Coaches</option>
+<option class="bg-surface-container-high text-on-surface" value="Alex Rivera">Alex Rivera</option>
+<option class="bg-surface-container-high text-on-surface" value="Sarah V.">Sarah V.</option>
+<option class="bg-surface-container-high text-on-surface" value="Marcus Vance">Marcus Vance</option>
+<option class="bg-surface-container-high text-on-surface" value="Dave Miller">Dave Miller</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-1.5 rounded-lg text-on-surface">
+<span class="font-label-sm text-label-sm text-outline-variant uppercase">Duration:</span>
+<select class="bg-transparent font-title-sm text-title-sm text-on-surface outline-none cursor-pointer" id="filter-duration">
+<option class="bg-surface-container-high text-on-surface" value="all">Any Duration</option>
+<option class="bg-surface-container-high text-on-surface" value="4">4 Weeks</option>
+<option class="bg-surface-container-high text-on-surface" value="6">6 Weeks</option>
+<option class="bg-surface-container-high text-on-surface" value="8">8 Weeks</option>
+<option class="bg-surface-container-high text-on-surface" value="10">10 Weeks</option>
+<option class="bg-surface-container-high text-on-surface" value="12">12 Weeks</option>
+</select>
+</div>
+<!-- View Switcher -->
+<div class="flex items-center bg-surface-container-lowest p-1 rounded-lg">
+<button class="p-1 rounded bg-surface-container-high text-primary transition-colors" id="view-grid-btn" title="Grid View">
+<span class="material-symbols-outlined text-[18px]">grid_view</span>
+</button>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface transition-colors" id="view-list-btn" title="List View">
+<span class="material-symbols-outlined text-[18px]">view_agenda</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Plans Grid Canvas -->
+<div class="px-margin py-space-md">
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg" id="plans-container">
+<!-- PLAN CARD 1 -->
+<div class="plan-card bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-200 relative group overflow-hidden" data-category="hypertrophy" data-coach="Alex Rivera" data-difficulty="Advanced" data-duration="8">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary-container"></div>
+<div>
+<!-- Card Header & Badges -->
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase font-bold tracking-wider">
+                Advanced
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                8 Weeks • 4 Days/wk
+              </span>
+</div>
+<!-- More menu action trigger -->
+<div class="relative dropdown-container">
+<button class="p-1 text-on-surface-variant hover:text-on-surface transition-colors rounded-lg bg-surface-container/50 hover:bg-surface-container" onclick="toggleCardMenu('menu-1')">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-lg bg-surface-container-high shadow-2xl py-1 z-30 font-title-sm text-title-sm" id="menu-1">
+<a class="flex items-center gap-2 px-3 py-2 text-on-surface hover:bg-surface-bright" href="#" onclick="triggerAction('Edit Plan: Hypertrophy Blitz'); return false;">
+<span class="material-symbols-outlined text-[16px]">edit</span> Edit Plan
+                </a>
+<a class="flex items-center gap-2 px-3 py-2 text-on-surface hover:bg-surface-bright" href="#" onclick="triggerAction('Duplicate: Hypertrophy Blitz'); return false;">
+<span class="material-symbols-outlined text-[16px]">content_copy</span> Duplicate Regimen
+                </a>
+<a class="flex items-center gap-2 px-3 py-2 text-on-surface hover:bg-surface-bright" href="#" onclick="triggerAction('Export PDF: Hypertrophy Blitz'); return false;">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span> Export Sheet
+                </a>
+<div class="h-px bg-surface-container-highest my-1"></div>
+<a class="flex items-center gap-2 px-3 py-2 text-error hover:bg-error-container/20" href="#" onclick="triggerDelete('Hypertrophy Blitz: Upper/Lower Split'); return false;">
+<span class="material-symbols-outlined text-[16px]">delete</span> Delete Regimen
+                </a>
+</div>
+</div>
+</div>
+<!-- Plan Title & Subtitle -->
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight mb-space-xs group-hover:text-primary transition-colors">
+            Hypertrophy Blitz: Upper/Lower Split
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md line-clamp-2">
+            Targeted mechanical tension program optimized for muscular adaptation, hypertrophy, and secondary explosive power development.
+          </p>
+<!-- Specifications Tags -->
+<div class="flex items-center gap-space-xs flex-wrap mb-space-md font-label-sm text-label-sm">
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">⏱ 65 min/session</span>
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">🎯 Chest, Back, Quads, Hams</span>
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">🏋️ Barbell / Cables</span>
+</div>
+<!-- Exercises Breakdown Box -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest mb-space-md">
+<div class="flex items-center justify-between mb-space-xs font-label-sm text-label-sm text-outline-variant uppercase">
+<span>Routine Preview (4 Movements)</span>
+<span class="text-tertiary">Week 3 Phase</span>
+</div>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Barbell Bench Press</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 sets × 8 reps</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Romanian Deadlift</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 sets × 10 reps</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Incline Dumbbell Press</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 sets × 12 reps</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>Cable Lateral Raises</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 sets × 15 reps</span>
+</li>
+</ul>
+</div>
+<!-- Coach and Enrolled Members Section -->
+<div class="flex items-center justify-between pt-space-xs pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center text-primary font-bold font-title-sm text-title-sm">
+                AR
+              </div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface leading-tight">Alex Rivera</span>
+<span class="font-label-sm text-label-sm text-outline-variant">Head Strength Coach</span>
+</div>
+</div>
+<!-- Athletes Avatar Stack -->
+<div class="flex items-center">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low" title="Sarah Jenkins">
+                  SJ
+                </div>
+<div class="w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low" title="Marcus Chen">
+                  MC
+                </div>
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low" title="+140 more athletes">
+                  +140
+                </div>
+</div>
+<span class="ml-2 font-label-sm text-label-sm text-on-surface font-semibold">142 Enrolled</span>
+</div>
+</div>
+<!-- Adherence & Compliance Bar -->
+<div class="mt-space-xs mb-space-md">
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-outline-variant">Cohort Adherence Rate</span>
+<span class="text-tertiary font-bold">91% (Optimal)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 91%"></div>
+</div>
+</div>
+</div>
+<!-- Action Row -->
+<div class="flex items-center gap-space-xs pt-space-sm border-t border-transparent">
+<button class="flex-1 py-2 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors font-title-sm text-title-sm rounded-lg flex items-center justify-center gap-1.5" onclick="openAssignModal('Hypertrophy Blitz: Upper/Lower Split')">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Assign</span>
+</button>
+<button class="flex-1 py-2 px-space-sm bg-primary-container/15 hover:bg-primary-container text-primary hover:text-on-primary-container transition-all font-title-sm text-title-sm rounded-lg flex items-center justify-center gap-1.5" onclick="openRoutineModal('Hypertrophy Blitz: Upper/Lower Split')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Routine</span>
+</button>
+</div>
+</div>
+<!-- PLAN CARD 2 -->
+<div class="plan-card bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-200 relative group overflow-hidden" data-category="endurance" data-coach="Sarah V." data-difficulty="Elite Pro" data-duration="12">
+<div class="absolute top-0 left-0 right-0 h-1 bg-error"></div>
+<div>
+<!-- Header Badges -->
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-error-container/30 text-error font-label-sm text-label-sm uppercase font-bold tracking-wider">
+                Elite Pro
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                12 Weeks • 5 Days/wk
+              </span>
+</div>
+<div class="relative dropdown-container">
+<button class="p-1 text-on-surface-variant hover:text-on-surface transition-colors rounded-lg bg-surface-container/50 hover:bg-surface-container" onclick="toggleCardMenu('menu-2')">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-lg bg-surface-container-high shadow-2xl py-1 z-30 font-title-sm text-title-sm" id="menu-2">
+<a class="flex items-center gap-2 px-3 py-2 text-on-surface hover:bg-surface-bright" href="#" onclick="triggerAction('Edit: Hyrox 2.0'); return false;"><span class="material-symbols-outlined text-[16px]">edit</span> Edit Plan</a>
+<a class="flex items-center gap-2 px-3 py-2 text-on-surface hover:bg-surface-bright" href="#" onclick="triggerAction('Duplicate: Hyrox 2.0'); return false;"><span class="material-symbols-outlined text-[16px]">content_copy</span> Duplicate</a>
+<div class="h-px bg-surface-container-highest my-1"></div>
+<a class="flex items-center gap-2 px-3 py-2 text-error hover:bg-error-container/20" href="#" onclick="triggerDelete('Hyrox &amp; Functional Engine 2.0'); return false;"><span class="material-symbols-outlined text-[16px]">delete</span> Delete</a>
+</div>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight mb-space-xs group-hover:text-primary transition-colors">
+            Hyrox &amp; Functional Engine 2.0
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md line-clamp-2">
+            Metabolic conditioning, threshold pacing, and race-specific station simulation for competitive Hyrox &amp; DEKA athletes.
+          </p>
+<div class="flex items-center gap-space-xs flex-wrap mb-space-md font-label-sm text-label-sm">
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">⏱ 75 min/session</span>
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">🎯 Aerobic Capacity, Lactic Power</span>
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">🏃 SkiErg / Sled / Wall Ball</span>
+</div>
+<!-- Exercises Breakdown Box -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest mb-space-md">
+<div class="flex items-center justify-between mb-space-xs font-label-sm text-label-sm text-outline-variant uppercase">
+<span>Routine Preview (Station Simulation)</span>
+<span class="text-error">Zone 4/5</span>
+</div>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>SkiErg High Resistance Intervals</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1,000m @ 1:48 pace</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>Sled Push Turf Drill</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">50m @ 152 kg</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>Burpee Broad Jumps</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">80 reps unbroken</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>Target Wall Balls (9kg)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">100 reps timed</span>
+</li>
+</ul>
+</div>
+<div class="flex items-center justify-between pt-space-xs pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/30 flex items-center justify-center text-tertiary font-bold font-title-sm text-title-sm">
+                SV
+              </div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface leading-tight">Sarah V.</span>
+<span class="font-label-sm text-label-sm text-outline-variant">Endurance Specialist</span>
+</div>
+</div>
+<div class="flex items-center">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low" title="David Kalu">
+                  DK
+                </div>
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low" title="Chloe Miller">
+                  CM
+                </div>
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low">
+                  +86
+                </div>
+</div>
+<span class="ml-2 font-label-sm text-label-sm text-on-surface font-semibold">88 Enrolled</span>
+</div>
+</div>
+<div class="mt-space-xs mb-space-md">
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-outline-variant">Cohort Adherence Rate</span>
+<span class="text-tertiary font-bold">86%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 86%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-space-sm">
+<button class="flex-1 py-2 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors font-title-sm text-title-sm rounded-lg flex items-center justify-center gap-1.5" onclick="openAssignModal('Hyrox &amp; Functional Engine 2.0')">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Assign</span>
+</button>
+<button class="flex-1 py-2 px-space-sm bg-primary-container/15 hover:bg-primary-container text-primary hover:text-on-primary-container transition-all font-title-sm text-title-sm rounded-lg flex items-center justify-center gap-1.5" onclick="openRoutineModal('Hyrox &amp; Functional Engine 2.0')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Routine</span>
+</button>
+</div>
+</div>
+<!-- PLAN CARD 3 -->
+<div class="plan-card bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-200 relative group overflow-hidden" data-category="strength" data-coach="Marcus Vance" data-difficulty="Beginner" data-duration="6">
+<div class="absolute top-0 left-0 right-0 h-1 bg-tertiary"></div>
+<div>
+<!-- Header Badges -->
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm uppercase font-bold tracking-wider">
+                Beginner
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                6 Weeks • 3 Days/wk
+              </span>
+</div>
+<div class="relative dropdown-container">
+<button class="p-1 text-on-surface-variant hover:text-on-surface transition-colors rounded-lg bg-surface-container/50 hover:bg-surface-container" onclick="toggleCardMenu('menu-3')">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-lg bg-surface-container-high shadow-2xl py-1 z-30 font-title-sm text-title-sm" id="menu-3">
+<a class="flex items-center gap-2 px-3 py-2 text-on-surface hover:bg-surface-bright" href="#" onclick="triggerAction('Edit: Foundational Strength'); return false;"><span class="material-symbols-outlined text-[16px]">edit</span> Edit Plan</a>
+<a class="flex items-center gap-2 px-3 py-2 text-on-surface hover:bg-surface-bright" href="#" onclick="triggerAction('Duplicate: Foundational Strength'); return false;"><span class="material-symbols-outlined text-[16px]">content_copy</span> Duplicate</a>
+<div class="h-px bg-surface-container-highest my-1"></div>
+<a class="flex items-center gap-2 px-3 py-2 text-error hover:bg-error-container/20" href="#" onclick="triggerDelete('Foundational Strength &amp; Posture'); return false;"><span class="material-symbols-outlined text-[16px]">delete</span> Delete</a>
+</div>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight mb-space-xs group-hover:text-primary transition-colors">
+            Foundational Strength &amp; Posture
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md line-clamp-2">
+            Neuromuscular repatterning, anterior/posterior chain balancing, and joint alignment for onboarding new lifters safely.
+          </p>
+<div class="flex items-center gap-space-xs flex-wrap mb-space-md font-label-sm text-label-sm">
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">⏱ 50 min/session</span>
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">🎯 Core Stability, Squat Mechanics</span>
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">🏋️ Kettlebells / Bodyweight</span>
+</div>
+<!-- Exercises Breakdown Box -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest mb-space-md">
+<div class="flex items-center justify-between mb-space-xs font-label-sm text-label-sm text-outline-variant uppercase">
+<span>Routine Preview (Core &amp; Hinge)</span>
+<span class="text-tertiary">Technique Focus</span>
+</div>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Kettlebell Goblet Squat</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 sets × 10 reps (3s tempo)</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Dumbbell Romanian Deadlift</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 sets × 10 reps</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Hollow Body Isometric Plank</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 sets × 45 sec</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>Neutral-Grip Lat Pulldown</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 sets × 12 reps</span>
+</li>
+</ul>
+</div>
+<div class="flex items-center justify-between pt-space-xs pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface font-bold font-title-sm text-title-sm">
+                MV
+              </div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface leading-tight">Marcus Vance</span>
+<span class="font-label-sm text-label-sm text-outline-variant">General Manager / Coach</span>
+</div>
+</div>
+<div class="flex items-center">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low" title="Elena Rostova">
+                  ER
+                </div>
+<div class="w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low" title="Brandon Brooks">
+                  BB
+                </div>
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low">
+                  +213
+                </div>
+</div>
+<span class="ml-2 font-label-sm text-label-sm text-on-surface font-semibold">215 Enrolled</span>
+</div>
+</div>
+<div class="mt-space-xs mb-space-md">
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-outline-variant">Cohort Adherence Rate</span>
+<span class="text-tertiary font-bold">94%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 94%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-space-sm">
+<button class="flex-1 py-2 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors font-title-sm text-title-sm rounded-lg flex items-center justify-center gap-1.5" onclick="openAssignModal('Foundational Strength &amp; Posture')">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Assign</span>
+</button>
+<button class="flex-1 py-2 px-space-sm bg-primary-container/15 hover:bg-primary-container text-primary hover:text-on-primary-container transition-all font-title-sm text-title-sm rounded-lg flex items-center justify-center gap-1.5" onclick="openRoutineModal('Foundational Strength &amp; Posture')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Routine</span>
+</button>
+</div>
+</div>
+<!-- PLAN CARD 4 -->
+<div class="plan-card bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-200 relative group overflow-hidden" data-category="strength" data-coach="Dave Miller" data-difficulty="Advanced" data-duration="10">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary-container"></div>
+<div>
+<!-- Header Badges -->
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm uppercase font-bold tracking-wider">
+                Advanced
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                10 Weeks • 4 Days/wk
+              </span>
+</div>
+<div class="relative dropdown-container">
+<button class="p-1 text-on-surface-variant hover:text-on-surface transition-colors rounded-lg bg-surface-container/50 hover:bg-surface-container" onclick="toggleCardMenu('menu-4')">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-lg bg-surface-container-high shadow-2xl py-1 z-30 font-title-sm text-title-sm" id="menu-4">
+<a class="flex items-center gap-2 px-3 py-2 text-on-surface hover:bg-surface-bright" href="#" onclick="triggerAction('Edit: Powerlifting Peaking'); return false;"><span class="material-symbols-outlined text-[16px]">edit</span> Edit Plan</a>
+<a class="flex items-center gap-2 px-3 py-2 text-on-surface hover:bg-surface-bright" href="#" onclick="triggerAction('Duplicate: Powerlifting Peaking'); return false;"><span class="material-symbols-outlined text-[16px]">content_copy</span> Duplicate</a>
+<div class="h-px bg-surface-container-highest my-1"></div>
+<a class="flex items-center gap-2 px-3 py-2 text-error hover:bg-error-container/20" href="#" onclick="triggerDelete('Powerlifting Peaking Cycle'); return false;"><span class="material-symbols-outlined text-[16px]">delete</span> Delete</a>
+</div>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight mb-space-xs group-hover:text-primary transition-colors">
+            Powerlifting Peaking Cycle
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md line-clamp-2">
+            Rigorous RPE-based periodization model for Squat, Bench, and Deadlift meet preparation and CNS adaptation.
+          </p>
+<div class="flex items-center gap-space-xs flex-wrap mb-space-md font-label-sm text-label-sm">
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">⏱ 80 min/session</span>
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">🎯 1RM SBD Optimization</span>
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">🏋️ Calibrated Steel Plates</span>
+</div>
+<!-- Exercises Breakdown Box -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest mb-space-md">
+<div class="flex items-center justify-between mb-space-xs font-label-sm text-label-sm text-outline-variant uppercase">
+<span>Routine Preview (Heavy Day)</span>
+<span class="text-secondary font-bold">RPE 8.5+</span>
+</div>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>Low Bar Competition Squat</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 sets × 3 reps @ 85%</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>Spoto / Pause Bench Press</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 sets × 3 reps @ 82%</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>Conventional Deadlift Singles</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 sets × 2 reps @ 88%</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>Deficit Pendlay Row</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 sets × 6 reps</span>
+</li>
+</ul>
+</div>
+<div class="flex items-center justify-between pt-space-xs pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-container/30 flex items-center justify-center text-secondary font-bold font-title-sm text-title-sm">
+                DM
+              </div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface leading-tight">Dave Miller</span>
+<span class="font-label-sm text-label-sm text-outline-variant">Powerlifting Director</span>
+</div>
+</div>
+<div class="flex items-center">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low" title="Jordan Reed">
+                  JR
+                </div>
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low">
+                  +63
+                </div>
+</div>
+<span class="ml-2 font-label-sm text-label-sm text-on-surface font-semibold">64 Enrolled</span>
+</div>
+</div>
+<div class="mt-space-xs mb-space-md">
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-outline-variant">Cohort Adherence Rate</span>
+<span class="text-tertiary font-bold">88%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 88%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-space-sm">
+<button class="flex-1 py-2 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors font-title-sm text-title-sm rounded-lg flex items-center justify-center gap-1.5" onclick="openAssignModal('Powerlifting Peaking Cycle')">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Assign</span>
+</button>
+<button class="flex-1 py-2 px-space-sm bg-primary-container/15 hover:bg-primary-container text-primary hover:text-on-primary-container transition-all font-title-sm text-title-sm rounded-lg flex items-center justify-center gap-1.5" onclick="openRoutineModal('Powerlifting Peaking Cycle')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Routine</span>
+</button>
+</div>
+</div>
+<!-- PLAN CARD 5 -->
+<div class="plan-card bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-200 relative group overflow-hidden" data-category="rehab" data-coach="Alex Rivera" data-difficulty="Intermediate" data-duration="4">
+<div class="absolute top-0 left-0 right-0 h-1 bg-secondary"></div>
+<div>
+<!-- Header Badges -->
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container/30 text-secondary font-label-sm text-label-sm uppercase font-bold tracking-wider">
+                Intermediate
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                4 Weeks • 3 Days/wk
+              </span>
+</div>
+<div class="relative dropdown-container">
+<button class="p-1 text-on-surface-variant hover:text-on-surface transition-colors rounded-lg bg-surface-container/50 hover:bg-surface-container" onclick="toggleCardMenu('menu-5')">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-lg bg-surface-container-high shadow-2xl py-1 z-30 font-title-sm text-title-sm" id="menu-5">
+<a class="flex items-center gap-2 px-3 py-2 text-on-surface hover:bg-surface-bright" href="#" onclick="triggerAction('Edit: Mobility Regimen'); return false;"><span class="material-symbols-outlined text-[16px]">edit</span> Edit Plan</a>
+<a class="flex items-center gap-2 px-3 py-2 text-on-surface hover:bg-surface-bright" href="#" onclick="triggerAction('Duplicate: Mobility Regimen'); return false;"><span class="material-symbols-outlined text-[16px]">content_copy</span> Duplicate</a>
+<div class="h-px bg-surface-container-highest my-1"></div>
+<a class="flex items-center gap-2 px-3 py-2 text-error hover:bg-error-container/20" href="#" onclick="triggerDelete('Athletic Mobility &amp; Active Recovery'); return false;"><span class="material-symbols-outlined text-[16px]">delete</span> Delete</a>
+</div>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight mb-space-xs group-hover:text-primary transition-colors">
+            Athletic Mobility &amp; Active Recovery
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md line-clamp-2">
+            Restores rotational kinetic chain mobility, hip flexor extensibility, and decompresses spinal loading post heavy compound lifting.
+          </p>
+<div class="flex items-center gap-space-xs flex-wrap mb-space-md font-label-sm text-label-sm">
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">⏱ 40 min/session</span>
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">🎯 Hip Openers, Thoracic Extension</span>
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">🧘 Bands / Foam Roller</span>
+</div>
+<!-- Exercises Breakdown Box -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest mb-space-md">
+<div class="flex items-center justify-between mb-space-xs font-label-sm text-label-sm text-outline-variant uppercase">
+<span>Routine Preview (Flow Phase)</span>
+<span class="text-tertiary">Recovery</span>
+</div>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>90/90 Hip Flow &amp; Internal Rotation</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 sets × 60s per side</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Cat-Cow to Thoracic Reach</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 sets × 12 reps</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>World's Greatest Stretch Sequence</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 sets × 8 reps/side</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Banded Ankle Distraction Drill</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 sets × 90s</span>
+</li>
+</ul>
+</div>
+<div class="flex items-center justify-between pt-space-xs pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center text-primary font-bold font-title-sm text-title-sm">
+                AR
+              </div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface leading-tight">Alex Rivera</span>
+<span class="font-label-sm text-label-sm text-outline-variant">Head Strength Coach</span>
+</div>
+</div>
+<div class="flex items-center">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low">
+                  TL
+                </div>
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low">
+                  +119
+                </div>
+</div>
+<span class="ml-2 font-label-sm text-label-sm text-on-surface font-semibold">120 Enrolled</span>
+</div>
+</div>
+<div class="mt-space-xs mb-space-md">
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-outline-variant">Cohort Adherence Rate</span>
+<span class="text-tertiary font-bold">96% (Superb)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 96%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-space-sm">
+<button class="flex-1 py-2 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors font-title-sm text-title-sm rounded-lg flex items-center justify-center gap-1.5" onclick="openAssignModal('Athletic Mobility &amp; Active Recovery')">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Assign</span>
+</button>
+<button class="flex-1 py-2 px-space-sm bg-primary-container/15 hover:bg-primary-container text-primary hover:text-on-primary-container transition-all font-title-sm text-title-sm rounded-lg flex items-center justify-center gap-1.5" onclick="openRoutineModal('Athletic Mobility &amp; Active Recovery')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Routine</span>
+</button>
+</div>
+</div>
+<!-- PLAN CARD 6 -->
+<div class="plan-card bg-surface-container-low rounded-xl p-space-lg flex flex-col justify-between shadow-md hover:shadow-xl transition-all duration-200 relative group overflow-hidden" data-category="endurance" data-coach="Sarah V." data-difficulty="Intermediate" data-duration="6">
+<div class="absolute top-0 left-0 right-0 h-1 bg-primary"></div>
+<div>
+<!-- Header Badges -->
+<div class="flex items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed/20 text-primary-fixed font-label-sm text-label-sm uppercase font-bold tracking-wider">
+                Intermediate
+              </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+                6 Weeks • 4 Days/wk
+              </span>
+</div>
+<div class="relative dropdown-container">
+<button class="p-1 text-on-surface-variant hover:text-on-surface transition-colors rounded-lg bg-surface-container/50 hover:bg-surface-container" onclick="toggleCardMenu('menu-6')">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+<div class="hidden absolute right-0 mt-1 w-44 rounded-lg bg-surface-container-high shadow-2xl py-1 z-30 font-title-sm text-title-sm" id="menu-6">
+<a class="flex items-center gap-2 px-3 py-2 text-on-surface hover:bg-surface-bright" href="#" onclick="triggerAction('Edit: Metabolic HIIT'); return false;"><span class="material-symbols-outlined text-[16px]">edit</span> Edit Plan</a>
+<a class="flex items-center gap-2 px-3 py-2 text-on-surface hover:bg-surface-bright" href="#" onclick="triggerAction('Duplicate: Metabolic HIIT'); return false;"><span class="material-symbols-outlined text-[16px]">content_copy</span> Duplicate</a>
+<div class="h-px bg-surface-container-highest my-1"></div>
+<a class="flex items-center gap-2 px-3 py-2 text-error hover:bg-error-container/20" href="#" onclick="triggerDelete('Metabolic HIIT &amp; Core Shred'); return false;"><span class="material-symbols-outlined text-[16px]">delete</span> Delete</a>
+</div>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight mb-space-xs group-hover:text-primary transition-colors">
+            Metabolic HIIT &amp; Core Shred
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md line-clamp-2">
+            High-density interval circuit triggering high EPOC calorie burn, midsection vascularity, and dynamic agility.
+          </p>
+<div class="flex items-center gap-space-xs flex-wrap mb-space-md font-label-sm text-label-sm">
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">⏱ 45 min/session</span>
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">🎯 Caloric Burn, Core Tabata</span>
+<span class="bg-surface-container px-2 py-1 rounded text-outline-variant">⚡ Assault Bike / KBs</span>
+</div>
+<!-- Exercises Breakdown Box -->
+<div class="p-space-sm rounded-lg bg-surface-container-lowest mb-space-md">
+<div class="flex items-center justify-between mb-space-xs font-label-sm text-label-sm text-outline-variant uppercase">
+<span>Routine Preview (Density Block)</span>
+<span class="text-primary font-bold">40s Work / 20s Rest</span>
+</div>
+<ul class="space-y-1.5 font-body-sm text-body-sm text-on-surface">
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Hardstyle Kettlebell Swings (24kg)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 sets × 20 reps</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Assault Bike Max Watt Sprints</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">10 sets × 30 sec</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Hanging Knees to Elbows</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 sets × 15 reps</span>
+</li>
+<li class="flex items-center justify-between">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Plyometric Box Jump Step-Downs</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 sets × 12 reps</span>
+</li>
+</ul>
+</div>
+<div class="flex items-center justify-between pt-space-xs pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-tertiary-container/30 flex items-center justify-center text-tertiary font-bold font-title-sm text-title-sm">
+                SV
+              </div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface leading-tight">Sarah V.</span>
+<span class="font-label-sm text-label-sm text-outline-variant">Endurance Specialist</span>
+</div>
+</div>
+<div class="flex items-center">
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low">
+                  CH
+                </div>
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-[10px] ring-2 ring-surface-container-low">
+                  +174
+                </div>
+</div>
+<span class="ml-2 font-label-sm text-label-sm text-on-surface font-semibold">175 Enrolled</span>
+</div>
+</div>
+<div class="mt-space-xs mb-space-md">
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1">
+<span class="text-outline-variant">Cohort Adherence Rate</span>
+<span class="text-tertiary font-bold">89%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 89%"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs pt-space-sm">
+<button class="flex-1 py-2 px-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors font-title-sm text-title-sm rounded-lg flex items-center justify-center gap-1.5" onclick="openAssignModal('Metabolic HIIT &amp; Core Shred')">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Assign</span>
+</button>
+<button class="flex-1 py-2 px-space-sm bg-primary-container/15 hover:bg-primary-container text-primary hover:text-on-primary-container transition-all font-title-sm text-title-sm rounded-lg flex items-center justify-center gap-1.5" onclick="openRoutineModal('Metabolic HIIT &amp; Core Shred')">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Routine</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Realtime Session Logs & Athlete Compliance Deck -->
+<div class="px-margin pt-space-md pb-space-xl">
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Live Routine Check-Ins &amp; Athlete Logs</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time telemetry feeds logged by IronPulse athletes on mobile floor kiosks and RFID stations today.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm rounded-lg flex items-center gap-1.5" onclick="triggerAction('Exporting Adherence Report')">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export CSV</span>
+</button>
+<button class="px-space-md py-1.5 bg-primary-container/20 hover:bg-primary-container/30 text-primary font-title-sm text-title-sm rounded-lg flex items-center gap-1.5" onclick="triggerAction('Syncing Smart Collars')">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Live Sync</span>
+</button>
+</div>
+</div>
+<!-- Live Roster Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead>
+<tr class="bg-surface-container text-outline-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-2.5 px-3 rounded-l-lg">Athlete Name</th>
+<th class="py-2.5 px-3">Active Regimen</th>
+<th class="py-2.5 px-3">Session Logged</th>
+<th class="py-2.5 px-3">Load Volume</th>
+<th class="py-2.5 px-3">Coach</th>
+<th class="py-2.5 px-3">Adherence Status</th>
+<th class="py-2.5 px-3 rounded-r-lg text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-[11px]">SJ</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Sarah Jenkins</span>
+<span class="font-label-sm text-label-sm text-outline-variant">RFID #8492</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 text-on-surface font-medium">Hypertrophy Blitz</td>
+<td class="py-3 px-3 text-on-surface-variant">Day 18 (Upper Heavy) • 17:15</td>
+<td class="py-3 px-3 text-on-surface font-semibold">14,280 kg total</td>
+<td class="py-3 px-3 text-on-surface-variant">Alex Rivera</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Complete (100%)
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors" onclick="triggerAction('Viewing telemetry for Sarah Jenkins')">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-[11px]">DK</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">David Kalu</span>
+<span class="font-label-sm text-label-sm text-outline-variant">RFID #9931</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 text-on-surface font-medium">Hyrox &amp; Functional Engine</td>
+<td class="py-3 px-3 text-on-surface-variant">Week 4 • SkiErg + Sled Drill</td>
+<td class="py-3 px-3 text-on-surface font-semibold">920 kcal • 48 min</td>
+<td class="py-3 px-3 text-on-surface-variant">Sarah V.</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Verified Paced
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors" onclick="triggerAction('Viewing telemetry for David Kalu')">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-[11px]">ER</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Elena Rostova</span>
+<span class="font-label-sm text-label-sm text-outline-variant">RFID #4120</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 text-on-surface font-medium">Foundational Strength</td>
+<td class="py-3 px-3 text-on-surface-variant">Week 2 • Goblet &amp; Core</td>
+<td class="py-3 px-3 text-on-surface font-semibold">6,400 kg total</td>
+<td class="py-3 px-3 text-on-surface-variant">Marcus Vance</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Perfect Form 98%
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors" onclick="triggerAction('Viewing telemetry for Elena Rostova')">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-high/50 transition-colors">
+<td class="py-3 px-3">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-bold text-[11px]">CM</div>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Chloe Miller</span>
+<span class="font-label-sm text-label-sm text-outline-variant">RFID #1029</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3 text-on-surface font-medium">Metabolic HIIT &amp; Core</td>
+<td class="py-3 px-3 text-on-surface-variant">Day 11 • Circuit B (Swings)</td>
+<td class="py-3 px-3 text-on-surface font-semibold">510 kcal • 38 min</td>
+<td class="py-3 px-3 text-on-surface-variant">Sarah V.</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span> Heart Rate Zone 4
+                </span>
+</td>
+<td class="py-3 px-3 text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors" onclick="triggerAction('Viewing telemetry for Chloe Miller')">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- CREATE / EDIT WORKOUT PLAN MODAL (POPUP DIALOG) -->
+<div class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-space-md" id="plan-modal">
+<div class="bg-surface-container-low rounded-2xl w-full max-w-2xl max-h-[921px] overflow-y-auto shadow-2xl p-space-xl relative flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Regimen Architect</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold" id="modal-title">Create Periodized Workout Plan</h2>
+</div>
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" onclick="closeModal('plan-modal')">
+<span class="material-symbols-outlined text-[24px]">close</span>
+</button>
+</div>
+<form class="flex flex-col gap-space-md" id="regimen-form" onsubmit="handleSavePlan(event)">
+<div class="flex flex-col gap-1">
+<label class="font-title-sm text-title-sm text-on-surface">Plan Title</label>
+<input class="w-full px-space-md py-space-sm bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container" id="input-plan-name" placeholder="e.g. Hypertrophy Blitz: Phase II" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-title-sm text-title-sm text-on-surface">Primary Category</label>
+<select class="w-full px-space-md py-space-sm bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm outline-none" id="input-category">
+<option value="hypertrophy">Hypertrophy &amp; Mass</option>
+<option value="strength">Strength &amp; Power</option>
+<option value="endurance">Endurance &amp; Hyrox</option>
+<option value="rehab">Rehab &amp; Mobility</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-title-sm text-title-sm text-on-surface">Difficulty Level</label>
+<select class="w-full px-space-md py-space-sm bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm outline-none" id="input-difficulty">
+<option value="Beginner">Beginner (Introductory)</option>
+<option value="Intermediate">Intermediate (Athletic)</option>
+<option value="Advanced">Advanced (High Load)</option>
+<option value="Elite Pro">Elite Pro (Competitive)</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-title-sm text-title-sm text-on-surface">Duration (Weeks)</label>
+<input class="w-full px-space-md py-space-sm bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm outline-none" id="input-duration" max="24" min="2" type="number" value="8"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-title-sm text-title-sm text-on-surface">Days Per Week</label>
+<input class="w-full px-space-md py-space-sm bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm outline-none" id="input-days" max="7" min="1" type="number" value="4"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-title-sm text-title-sm text-on-surface">Session Est. (Min)</label>
+<input class="w-full px-space-md py-space-sm bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm outline-none" id="input-session-time" max="180" min="20" type="number" value="65"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-title-sm text-title-sm text-on-surface">Assigned Lead Coach</label>
+<select class="w-full px-space-md py-space-sm bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm outline-none" id="input-coach">
+<option value="Alex Rivera">Alex Rivera (Strength Coach)</option>
+<option value="Sarah V.">Sarah V. (Endurance Specialist)</option>
+<option value="Marcus Vance">Marcus Vance (General Manager)</option>
+<option value="Dave Miller">Dave Miller (Powerlifting Director)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-title-sm text-title-sm text-on-surface">Target Muscles / Focus</label>
+<input class="w-full px-space-md py-space-sm bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm outline-none" id="input-focus" placeholder="e.g. Chest, Quads, Kinetic Chain" type="text"/>
+</div>
+</div>
+<!-- Exercise Routine Sub-Section -->
+<div class="flex flex-col gap-2 pt-2">
+<div class="flex items-center justify-between">
+<label class="font-title-sm text-title-sm text-on-surface">Exercise Structure (Primary Exercises)</label>
+<span class="text-outline font-label-sm text-label-sm">Sets, Reps &amp; Load</span>
+</div>
+<div class="space-y-2" id="exercise-rows">
+<div class="flex items-center gap-2">
+<input class="flex-2 w-1/2 px-3 py-1.5 bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm outline-none" placeholder="Exercise name" type="text" value="Main Lift: Barbell Squat"/>
+<input class="flex-1 w-1/4 px-3 py-1.5 bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm outline-none" placeholder="4x8" type="text" value="4x8 @ 75%"/>
+<input class="flex-1 w-1/4 px-3 py-1.5 bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm outline-none" placeholder="Target" type="text" value="Legs"/>
+</div>
+<div class="flex items-center gap-2">
+<input class="flex-2 w-1/2 px-3 py-1.5 bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm outline-none" placeholder="Exercise name" type="text" value="Accessory: Romanian Deadlift"/>
+<input class="flex-1 w-1/4 px-3 py-1.5 bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm outline-none" placeholder="3x10" type="text" value="3x10 @ 70%"/>
+<input class="flex-1 w-1/4 px-3 py-1.5 bg-surface-container-lowest rounded-lg text-on-surface font-body-sm text-body-sm outline-none" placeholder="Target" type="text" value="Hamstrings"/>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-md border-t border-surface-container-high">
+<button class="px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm rounded-lg transition-colors" onclick="closeModal('plan-modal')" type="button">
+            Cancel
+          </button>
+<button class="px-space-lg py-space-sm bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-title-sm text-title-sm rounded-lg shadow-[0_0_15px_rgba(255,94,20,0.3)] transition-all" type="submit">
+            Deploy Workout Plan
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- ASSIGN ATHLETE MODAL -->
+<div class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-space-md" id="assign-modal">
+<div class="bg-surface-container-low rounded-2xl w-full max-w-lg shadow-2xl p-space-xl relative flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase">Athlete Enrollment</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="assign-plan-name">Assign Workout Plan</h3>
+</div>
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-on-surface" onclick="closeModal('assign-modal')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Select IronPulse active athletes to push this training prescription into their mobile athlete dashboard and RFID floor console.
+      </p>
+<div class="space-y-2 max-h-60 overflow-y-auto pr-1">
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2">
+<input checked="" class="accent-primary-container w-4 h-4 rounded" type="checkbox"/>
+<span class="font-title-sm text-title-sm text-on-surface">Sarah Jenkins</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">Current: Hypertrophy Blitz</span>
+</label>
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2">
+<input class="accent-primary-container w-4 h-4 rounded" type="checkbox"/>
+<span class="font-title-sm text-title-sm text-on-surface">David Kalu</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant">Current: Hyrox Pro</span>
+</label>
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2">
+<input class="accent-primary-container w-4 h-4 rounded" type="checkbox"/>
+<span class="font-title-sm text-title-sm text-on-surface">Marcus Chen</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant">Unassigned Plan</span>
+</label>
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2">
+<input checked="" class="accent-primary-container w-4 h-4 rounded" type="checkbox"/>
+<span class="font-title-sm text-title-sm text-on-surface">Elena Rostova</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">Foundational Strength</span>
+</label>
+<label class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-2">
+<input class="accent-primary-container w-4 h-4 rounded" type="checkbox"/>
+<span class="font-title-sm text-title-sm text-on-surface">Chloe Miller</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline-variant">Metabolic HIIT</span>
+</label>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm rounded-lg transition-colors" onclick="closeModal('assign-modal')" type="button">
+          Cancel
+        </button>
+<button class="px-space-lg py-space-sm bg-primary-container hover:bg-primary-fixed-dim text-on-primary-container font-title-sm text-title-sm rounded-lg shadow-md transition-all" onclick="confirmAssignment()" type="button">
+          Confirm &amp; Sync Athletes
+        </button>
+</div>
+</div>
+</div>
+<!-- ROUTINE VIEWER MODAL -->
+<div class="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm hidden items-center justify-center p-space-md" id="routine-modal">
+<div class="bg-surface-container-low rounded-2xl w-full max-w-2xl max-h-[870px] overflow-y-auto shadow-2xl p-space-xl relative flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase">Regimen Blueprint</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold" id="routine-modal-title">Routine Breakdown</h3>
+</div>
+<button class="p-1 rounded-lg text-on-surface-variant hover:text-on-surface" onclick="closeModal('routine-modal')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-lowest space-y-3 font-body-sm text-body-sm">
+<div class="flex items-center justify-between text-outline-variant font-label-sm text-label-sm">
+<span>EXERCISE &amp; EQUIPMENT</span>
+<span>SETS × REPS / LOAD / REST</span>
+</div>
+<div class="flex items-center justify-between py-2 border-b border-surface-container">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">1. Barbell Back Squat</span>
+<span class="text-outline-variant font-label-sm text-label-sm">Olympic Barbell • Heavy Lower</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary">4 × 6-8 reps (90s rest)</span>
+</div>
+<div class="flex items-center justify-between py-2 border-b border-surface-container">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">2. Romanian Deadlift (RDL)</span>
+<span class="text-outline-variant font-label-sm text-label-sm">Barbell + Straps • Posterior Chain</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary">4 × 10 reps (75s rest)</span>
+</div>
+<div class="flex items-center justify-between py-2 border-b border-surface-container">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">3. Incline Dumbbell Bench</span>
+<span class="text-outline-variant font-label-sm text-label-sm">30° Adjustable Bench • Clavicular Head</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary">3 × 10-12 reps (60s rest)</span>
+</div>
+<div class="flex items-center justify-between py-2">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">4. Hanging Leg Raises</span>
+<span class="text-outline-variant font-label-sm text-label-sm">Pull-up Bar • Core Stabilization</span>
+</div>
+<span class="font-title-sm text-title-sm text-primary">3 × 15 reps (45s rest)</span>
+</div>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm rounded-lg flex items-center gap-1.5 transition-colors" onclick="triggerAction('Printing Workout Card PDF')">
+<span class="material-symbols-outlined text-[16px]">print</span>
+<span>Print Floor Card</span>
+</button>
+<button class="px-space-lg py-space-sm bg-primary-container text-on-primary-container font-title-sm text-title-sm rounded-lg" onclick="closeModal('routine-modal')">
+          Done
+        </button>
+</div>
+</div>
+</div>
+<!-- FLOATING TOAST NOTIFICATION -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-space-sm px-space-md py-space-sm rounded-xl bg-surface-container-high text-on-surface shadow-2xl border-l-4 border-primary-container" id="toast">
+<span class="material-symbols-outlined text-primary-container text-[20px]" id="toast-icon">check_circle</span>
+<span class="font-title-sm text-title-sm" id="toast-msg">Operation completed successfully.</span>
+</div>
+<!-- Interactive JavaScript -->
+<script>
+    function showToast(message, icon = 'check_circle') {
+      const toast = document.getElementById('toast');
+      const msg = document.getElementById('toast-msg');
+      const ic = document.getElementById('toast-icon');
+      msg.textContent = message;
+      ic.textContent = icon;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3500);
+    }
+
+    function toggleCardMenu(menuId) {
+      document.querySelectorAll('.dropdown-container > div').forEach(el => {
+        if (el.id !== menuId) el.classList.add('hidden');
+      });
+      const target = document.getElementById(menuId);
+      if (target) {
+        target.classList.toggle('hidden');
+      }
+    }
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.dropdown-container')) {
+        document.querySelectorAll('.dropdown-container > div').forEach(el => el.classList.add('hidden'));
+      }
+    });
+
+    function openModal(id) {
+      const m = document.getElementById(id);
+      if (m) {
+        m.classList.remove('hidden');
+        m.classList.add('flex');
+      }
+    }
+
+    function closeModal(id) {
+      const m = document.getElementById(id);
+      if (m) {
+        m.classList.add('hidden');
+        m.classList.remove('flex');
+      }
+    }
+
+    function triggerAction(actionName) {
+      showToast(`${actionName}`);
+    }
+
+    function triggerDelete(planName) {
+      if (confirm(`Are you sure you want to deactivate and remove regimen "${planName}"? Active members will be moved to default program.`)) {
+        showToast(`Regimen "${planName}" removed from active roster.`, 'delete');
+      }
+    }
+
+    function openAssignModal(planName) {
+      document.getElementById('assign-plan-name').textContent = planName;
+      openModal('assign-modal');
+    }
+
+    function confirmAssignment() {
+      closeModal('assign-modal');
+      showToast('Enrolled athletes synchronized to floor RFID consoles!');
+    }
+
+    function openRoutineModal(planName) {
+      document.getElementById('routine-modal-title').textContent = planName;
+      openModal('routine-modal');
+    }
+
+    // Header buttons
+    document.getElementById('create-plan-btn').addEventListener('click', () => {
+      document.getElementById('modal-title').textContent = "Create Periodized Workout Plan";
+      openModal('plan-modal');
+    });
+
+    document.getElementById('import-regimen-btn').addEventListener('click', () => {
+      showToast('Importing Hyrox/CrossFit Periodization templates...');
+    });
+
+    document.getElementById('open-library-btn').addEventListener('click', () => {
+      showToast('Opening 420+ Exercise Database & Movement Glossary...');
+    });
+
+    // Handle Form Submit
+    function handleSavePlan(e) {
+      e.preventDefault();
+      const planName = document.getElementById('input-plan-name').value;
+      closeModal('plan-modal');
+      showToast(`Regimen "${planName}" deployed successfully to library!`);
+    }
+
+    // Filter Logic
+    const categoryButtons = document.querySelectorAll('.plan-filter-btn');
+    const searchInput = document.getElementById('plan-search-input');
+    const filterDifficulty = document.getElementById('filter-difficulty');
+    const filterCoach = document.getElementById('filter-coach');
+    const filterDuration = document.getElementById('filter-duration');
+
+    let currentCategory = 'all';
+
+    function applyFilters() {
+      const query = (searchInput.value || '').toLowerCase().trim();
+      const diffVal = filterDifficulty.value;
+      const coachVal = filterCoach.value;
+      const durationVal = filterDuration.value;
+
+      const cards = document.querySelectorAll('.plan-card');
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const diff = card.getAttribute('data-difficulty');
+        const coach = card.getAttribute('data-coach');
+        const duration = card.getAttribute('data-duration');
+        const textContent = card.innerText.toLowerCase();
+
+        let matchesCat = (currentCategory === 'all' || cat === currentCategory);
+        let matchesDiff = (diffVal === 'all' || diff === diffVal);
+        let matchesCoach = (coachVal === 'all' || coach === coachVal);
+        let matchesDuration = (durationVal === 'all' || duration === durationVal);
+        let matchesQuery = !query || textContent.includes(query);
+
+        if (matchesCat && matchesDiff && matchesCoach && matchesDuration && matchesQuery) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    categoryButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryButtons.forEach(b => {
+          b.classList.remove('bg-primary-container', 'text-on-primary-container');
+          b.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        btn.classList.add('bg-primary-container', 'text-on-primary-container');
+        currentCategory = btn.getAttribute('data-category');
+        applyFilters();
+      });
+    });
+
+    searchInput.addEventListener('input', applyFilters);
+    filterDifficulty.addEventListener('change', applyFilters);
+    filterCoach.addEventListener('change', applyFilters);
+    filterDuration.addEventListener('change', applyFilters);
+
+    // View Switchers
+    const gridBtn = document.getElementById('view-grid-btn');
+    const listBtn = document.getElementById('view-list-btn');
+    const container = document.getElementById('plans-container');
+
+    gridBtn.addEventListener('click', () => {
+      gridBtn.classList.add('bg-surface-container-high', 'text-primary');
+      gridBtn.classList.remove('text-on-surface-variant');
+      listBtn.classList.remove('bg-surface-container-high', 'text-primary');
+      listBtn.classList.add('text-on-surface-variant');
+
+      container.className = "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-lg";
+    });
+
+    listBtn.addEventListener('click', () => {
+      listBtn.classList.add('bg-surface-container-high', 'text-primary');
+      listBtn.classList.remove('text-on-surface-variant');
+      gridBtn.classList.remove('bg-surface-container-high', 'text-primary');
+      gridBtn.classList.add('text-on-surface-variant');
+
+      container.className = "grid grid-cols-1 gap-space-md";
+    });
+  </script>
+</div></main></div></body></html>

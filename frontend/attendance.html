@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>FITZONE - Attendance & Check-in</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#ff5e14',
+            'primary-container': '#ff5e14',
+            'background': '#0b0e14',
+            'surface-container-lowest': '#0b0e14',
+            'surface-container-low': '#191c22',
+            'surface-container': '#1d2026',
+            'surface-container-high': '#272a31',
+            'surface-container-highest': '#32353c',
+            'surface-bright': '#363940',
+            'on-surface': '#e1e2eb',
+            'on-surface-variant': '#e4beb2',
+            'outline': '#aa897e',
+            'outline-variant': '#5b4138',
+            'tertiary': '#4edea3',
+            'error': '#ffb4ab'
+          },
+          fontFamily: {
+            'sans': ['Inter', 'sans-serif'],
+            'display': ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="bg-surface-container-lowest font-sans text-on-surface antialiased">
+
+  <!-- Sidebar -->
+  <aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-2xl border-r border-surface-container-high">
+    <div class="flex flex-col">
+      <a href="dashboard.html" class="h-16 px-4 flex items-center gap-3 bg-surface-container border-b border-surface-container-high">
+        <div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-white shadow-[0_0_12px_rgba(255,94,20,0.5)]">
+          <span class="material-symbols-outlined text-[22px]">fitness_center</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display text-lg font-extrabold tracking-tight text-on-surface">FITZONE</span>
+          <span class="text-[10px] text-outline-variant font-bold tracking-widest uppercase">GYM MANAGEMENT OS</span>
+        </div>
+      </a>
+
+      <div class="px-4 pt-5 pb-2">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-outline-variant">Core Operations</span>
+      </div>
+      <nav class="px-3 flex flex-col gap-1">
+        <a href="dashboard.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">dashboard</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="members.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[20px]">group</span>
+            <span>Members</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface text-[11px] font-bold">24</span>
+        </a>
+        <a href="memberships.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">card_membership</span>
+          <span>Memberships</span>
+        </a>
+        <a href="trainers.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">sports_gymnastics</span>
+          <span>Trainers</span>
+        </a>
+        <a href="attendance.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-display text-sm font-bold bg-surface-container-high text-primary shadow-[inset_3px_0_0_0_#ff5e14]">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[20px]">fact_check</span>
+            <span>Attendance</span>
+          </div>
+          <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+        </a>
+        <a href="payments.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">payments</span>
+          <span>Payments</span>
+        </a>
+        <a href="workouts.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">exercise</span>
+          <span>Workout Plans</span>
+        </a>
+        <a href="settings.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">settings</span>
+          <span>Settings</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="p-4 bg-surface-container border-t border-surface-container-high">
+      <button id="sidebar-signout-btn" class="flex items-center gap-2.5 px-3 py-2 text-on-surface-variant hover:text-error transition-colors rounded-xl text-sm font-semibold w-full text-left">
+        <span class="material-symbols-outlined text-[20px]">logout</span>
+        <span>Sign Out</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Container -->
+  <div class="pl-64 min-h-screen flex flex-col">
+    <header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-low/95 backdrop-blur-xl z-40 flex items-center justify-between px-8 border-b border-surface-container-high">
+      <div class="text-sm font-display font-bold text-on-surface uppercase tracking-wider">
+        Turnstile & Check-in Desk
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="px-3 py-1 rounded-full bg-tertiary-container/20 text-tertiary text-xs font-bold flex items-center gap-1.5" id="attendance-present-count">
+          <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+          -- Inside Floor
+        </span>
+      </div>
+    </header>
+
+    <main class="w-full pt-20 px-8 pb-12 flex-1">
+      <div class="max-w-[1720px] mx-auto space-y-6">
+
+        <!-- Top Rapid Check-in Station Banner -->
+        <div class="bg-surface-container rounded-3xl p-8 border border-surface-container-high shadow-xl relative overflow-hidden">
+          <div class="absolute -right-16 -top-16 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div class="relative z-10 max-w-3xl">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="px-2.5 py-0.5 rounded-full bg-primary-container/20 text-primary text-xs font-bold uppercase tracking-wider">
+                Front Desk Terminal
+              </span>
+              <span class="text-xs text-outline-variant">• High-Speed Authentication</span>
+            </div>
+            <h1 class="font-display text-2xl font-extrabold text-on-surface">
+              Rapid Athlete Check-in
+            </h1>
+            <p class="text-xs text-outline-variant mt-1 mb-6">
+              Enter athlete Member ID, full name, or phone number. System automatically verifies active subscription dates and prevents entry if expired.
+            </p>
+
+            <!-- Quick Form -->
+            <form id="rapid-checkin-form" class="flex flex-col sm:flex-row items-center gap-3">
+              <div class="relative flex-1 w-full">
+                <span class="material-symbols-outlined absolute left-3.5 top-3.5 text-primary text-[22px]">contactless</span>
+                <input id="rapid-checkin-input" type="text" placeholder="Enter Member ID (e.g. FZ-2026-0001) or Athlete Name..."
+                  class="w-full bg-surface-container-lowest border border-surface-container-high focus:border-primary rounded-2xl py-3 pl-12 pr-4 text-sm text-on-surface outline-none shadow-inner placeholder:text-outline-variant"/>
+              </div>
+              <button type="submit" class="w-full sm:w-auto px-6 py-3 bg-primary text-white font-display font-bold text-xs uppercase tracking-wider rounded-2xl hover:bg-primary-dark transition-all shadow-[0_0_20px_rgba(255,94,20,0.4)] flex items-center justify-center gap-2 shrink-0">
+                <span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+                <span>Verify & Check-in</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Filter Bar & Table Card -->
+        <div class="bg-surface-container rounded-3xl border border-surface-container-high shadow-xl overflow-hidden">
+          <!-- Table Toolbar -->
+          <div class="p-6 border-b border-surface-container-high flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+              <h2 class="font-display text-lg font-bold text-on-surface">Daily Attendance & Check-out Logs</h2>
+              <p class="text-xs text-outline-variant">Real-time gym floor ingress and egress times</p>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <!-- Search -->
+              <div class="flex items-center gap-2 bg-surface-container-lowest px-3 py-1.5 rounded-xl border border-surface-container-high text-xs">
+                <span class="material-symbols-outlined text-outline-variant text-[16px]">search</span>
+                <input id="attendance-search-input" type="text" placeholder="Search athlete..." class="bg-transparent text-xs text-on-surface outline-none w-40 placeholder:text-outline-variant"/>
+              </div>
+
+              <!-- Date Picker -->
+              <input id="attendance-date-filter" type="date" value="2026-11-20" class="bg-surface-container-lowest border border-surface-container-high rounded-xl py-1.5 px-3 text-xs text-on-surface outline-none focus:border-primary"/>
+
+              <span class="px-2.5 py-1 rounded-lg bg-surface-container-highest text-xs font-mono font-bold text-outline" id="attendance-total-count">-- Entries</span>
+            </div>
+          </div>
+
+          <!-- Attendance Table -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-left">
+              <thead>
+                <tr class="border-b border-surface-container-high bg-surface-container-low/60 text-xs font-bold uppercase tracking-wider text-outline">
+                  <th class="py-3 px-4">Log ID</th>
+                  <th class="py-3 px-4">Athlete Details</th>
+                  <th class="py-3 px-4">Date</th>
+                  <th class="py-3 px-4">Check-in Time</th>
+                  <th class="py-3 px-4">Status</th>
+                  <th class="py-3 px-4 text-right">Action / Exit Time</th>
+                </tr>
+              </thead>
+              <tbody id="attendance-table-tbody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <script type="module">
+    import { initAttendance } from './js/attendance.js';
+    import { logout } from './js/auth.js';
+
+    initAttendance();
+    document.getElementById('sidebar-signout-btn').addEventListener('click', logout);
+  </script>
+</body>
+</html>

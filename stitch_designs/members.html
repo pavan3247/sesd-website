@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'on-primary-container': '#541800', 'secondary-fixed-dim': '#adc6ff', 'surface-container-low': '#191c22', 'on-tertiary': '#003824', 'on-surface-variant': '#e4beb2', 'background': '#10131a', 'surface-container-lowest': '#0b0e14', 'on-primary-fixed': '#380d00', 'tertiary-container': '#00a874', 'secondary-container': '#0566d9', 'surface-dim': '#10131a', 'on-secondary': '#002e6a', 'surface': '#10131a', 'outline': '#aa897e', 'on-secondary-container': '#e6ecff', 'surface-variant': '#32353c', 'on-secondary-fixed': '#001a42', 'on-primary': '#5b1a00', 'on-primary-fixed-variant': '#812900', 'on-tertiary-fixed-variant': '#005236', 'tertiary-fixed-dim': '#4edea3', 'inverse-surface': '#e1e2eb', 'outline-variant': '#5b4138', 'tertiary-fixed': '#6ffbbe', 'secondary-fixed': '#d8e2ff', 'error-container': '#93000a', 'error': '#ffb4ab', 'on-error-container': '#ffdad6', 'tertiary': '#4edea3', 'inverse-on-surface': '#2e3037', 'surface-container': '#1d2026', 'primary-fixed-dim': '#ffb59b', 'secondary': '#adc6ff', 'on-tertiary-container': '#003421', 'on-error': '#690005', 'surface-tint': '#ffb59b', 'on-tertiary-fixed': '#002113', 'on-secondary-fixed-variant': '#004395', 'surface-container-highest': '#32353c', 'primary-container': '#ff5e14', 'surface-container-high': '#272a31', 'surface-bright': '#363940', 'primary': '#ffb59b', 'inverse-primary': '#a93800', 'on-background': '#e1e2eb', 'primary-fixed': '#ffdbcf', 'on-surface': '#e1e2eb' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, 'spacing': { 'space-sm': '0.5rem', 'gutter-mobile': '0.75rem', 'space-lg': '1.5rem', 'space-xl': '2rem', 'gutter': '1.5rem', 'margin-mobile': '1rem', 'space-xs': '0.25rem', 'space-md': '1rem', 'margin': '2rem' }, 'fontFamily': { 'headline-xl-mobile': ['Outfit'], 'headline-xl': ['Outfit'], 'body-md': ['Inter'], 'metric-display': ['Outfit'], 'label-sm': ['Inter'], 'label-md': ['Inter'], 'headline-md': ['Outfit'], 'headline-lg-mobile': ['Outfit'], 'body-sm': ['Inter'], 'headline-lg': ['Outfit'], 'body-lg': ['Inter'], 'title-sm': ['Outfit'], 'headline-sm': ['Outfit'], 'title-md': ['Outfit'] }, 'fontSize': { 'headline-xl-mobile': ['30px', { 'lineHeight': '38px', 'fontWeight': '700' }], 'headline-xl': ['40px', { 'lineHeight': '48px', 'fontWeight': '700' }], 'body-md': ['14px', { 'lineHeight': '20px', 'fontWeight': '400' }], 'metric-display': ['36px', { 'lineHeight': '42px', 'fontWeight': '700' }], 'label-sm': ['11px', { 'lineHeight': '14px', 'fontWeight': '600' }], 'label-md': ['13px', { 'lineHeight': '18px', 'fontWeight': '500' }], 'headline-md': ['24px', { 'lineHeight': '32px', 'fontWeight': '600' }], 'headline-lg-mobile': ['24px', { 'lineHeight': '32px', 'fontWeight': '700' }], 'body-sm': ['12px', { 'lineHeight': '16px', 'fontWeight': '400' }], 'headline-lg': ['32px', { 'lineHeight': '40px', 'fontWeight': '700' }], 'body-lg': ['16px', { 'lineHeight': '24px', 'fontWeight': '400' }], 'title-sm': ['14px', { 'lineHeight': '20px', 'fontWeight': '600' }], 'headline-sm': ['20px', { 'lineHeight': '28px', 'fontWeight': '600' }], 'title-md': ['16px', { 'lineHeight': '24px', 'fontWeight': '600' }] } } } };</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center gap-space-sm bg-surface-container"><img alt="IronPulse Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDIshoVC9a0DHkA4rgXFfX5NZiG8ktDfWniXjXpIgdrxPEimTnAXPp2Am2dLwRtdF7CgZ93K3MAHg0623_Ee9SY1x-jkZKD8F142uqPRVXUpNtq-bSnZ86XgpDvHrW-HBjN6u3X8RGndguCFsY9vjVkSwn_q8jjwD3aqCL6DKl5YgX56atBF_5J1JDj9yFakROrmT6VVruMwz9QLw4hL8WKJbNHxFu7xgJxZUoyd-Bo"/><div class="flex flex-col"><span class="font-title-sm text-title-sm text-on-surface tracking-wide uppercase">IronPulse</span><span class="font-label-sm text-label-sm text-outline-variant tracking-wider uppercase">GYM MANAGEMENT OS</span></div></div><div class="px-space-md pt-space-lg pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline-variant">Core Operations</span></div><nav class="px-space-xs flex flex-col gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-bold shadow-[inset_3px_0_0_0_#ff5e14]"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-title-sm text-title-sm">Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="members" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">group</span><span class="font-title-sm text-title-sm">Members</span></div><span class="px-space-sm py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm">1,420</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="memberships" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">card_membership</span><span class="font-title-sm text-title-sm">Memberships</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="trainers" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">sports_gymnastics</span><span class="font-title-sm text-title-sm">Trainers</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="attendance" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-title-sm text-title-sm">Attendance</span></div><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="payments" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">payments</span><span class="font-title-sm text-title-sm">Payments</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="workout-plans" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">fitness_center</span><span class="font-title-sm text-title-sm">Workout Plans</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-title-sm text-title-sm">Settings</span></div></a></nav></div><div class="p-space-md bg-surface-container flex flex-col gap-space-md"><div class="bg-surface-container-high p-space-sm rounded-lg"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Club Capacity</span><span class="font-label-sm text-label-sm text-tertiary font-bold">74%</span></div><div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden mb-space-xs"><div class="h-full bg-primary-container rounded-full" style="width: 74%"></div></div><div class="flex items-center justify-between"><span class="font-body-sm text-body-sm text-on-surface">148 / 200 Inside</span><span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span></div></div><a class="flex items-center gap-space-sm px-space-sm py-space-xs text-on-surface-variant hover:text-error transition-colors rounded-lg" data-path="login" href="#"><span class="material-symbols-outlined text-[20px]">logout</span><span class="font-title-sm text-title-sm">Sign Out</span></a></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-low/95 backdrop-blur-xl z-40 flex items-center justify-between px-gutter shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><img alt="IronPulse Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrDIshoVC9a0DHkA4rgXFfX5NZiG8ktDfWniXjXpIgdrxPEimTnAXPp2Am2dLwRtdF7CgZ93K3MAHg0623_Ee9SY1x-jkZKD8F142uqPRVXUpNtq-bSnZ86XgpDvHrW-HBjN6u3X8RGndguCFsY9vjVkSwn_q8jjwD3aqCL6DKl5YgX56atBF_5J1JDj9yFakROrmT6VVruMwz9QLw4hL8WKJbNHxFu7xgJxZUoyd-Bo"/><div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-xs rounded-lg w-80 text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">search</span><input class="bg-transparent w-full border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline-variant" placeholder="Search athlete, RFID, plan..." type="text"/><kbd class="font-label-sm text-label-sm bg-surface-container px-space-xs py-0.5 rounded text-outline">⌘K</kbd></div></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container rounded-full"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm text-on-surface uppercase">Open • Peak Hours</span><span class="font-label-sm text-label-sm text-outline-variant">17:42</span></div><button class="flex items-center gap-space-xs px-space-md py-space-sm bg-primary-container text-on-primary-container hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-colors font-title-sm text-title-sm rounded-lg" type="button"><span class="material-symbols-outlined text-[18px]">how_to_reg</span><span>Check-in Member</span></button><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1 right-1 w-4 h-4 bg-primary-container text-on-primary-container font-label-sm text-[10px] leading-none rounded-full flex items-center justify-center font-bold">3</span></button><div class="flex items-center gap-space-sm pl-space-sm bg-surface-container py-1 px-space-sm rounded-lg"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-title-sm text-title-sm text-on-surface leading-tight">Marcus Vance</span><span class="font-label-sm text-label-sm text-outline-variant">General Manager</span></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div></header><main class="w-full pt-16 bg-surface-container-lowest"><div class="flex flex-col w-full">
+<!-- Top Command & Action Bar -->
+<div class="px-gutter pt-space-lg pb-space-md flex flex-col xl:flex-row xl:items-center xl:justify-between gap-space-md bg-surface-container-low shadow-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+          Athletic Database v4.2
+        </span>
+<span class="text-outline-variant font-body-sm">•</span>
+<span class="font-label-sm text-label-sm text-outline-variant uppercase tracking-wider">Sync Status: Live</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Member Directory &amp; Management</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+        Manage 1,482 active athletes, membership renewals, digital check-in passes, and contract agreements across unified training zones.
+      </p>
+</div>
+<!-- Quick Actions Group -->
+<div class="flex flex-wrap items-center gap-space-sm self-start xl:self-center">
+<div class="relative inline-block text-left" id="bulk-menu-container">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-title-sm text-title-sm rounded-lg shadow-sm" id="bulk-actions-btn" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">checklist</span>
+<span>Bulk Actions</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+<div class="hidden absolute right-0 mt-2 w-56 rounded-lg bg-surface-container-high shadow-xl z-30 p-space-xs" id="bulk-dropdown">
+<a class="flex items-center gap-space-sm px-space-sm py-space-xs font-body-sm text-body-sm text-on-surface hover:bg-surface-container rounded-md transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-tertiary">send</span>
+<span>Broadcast SMS / Push</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-space-xs font-body-sm text-body-sm text-on-surface hover:bg-surface-container rounded-md transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary">autorenew</span>
+<span>Batch Renew Contracts</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-space-xs font-body-sm text-body-sm text-error hover:bg-surface-container rounded-md transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">block</span>
+<span>Suspend Selected</span>
+</a>
+</div>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-title-sm text-title-sm rounded-lg shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">file_download</span>
+<span>Export CSV</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-lg py-space-sm bg-primary-container text-on-primary-container hover:bg-primary-fixed-dim hover:text-on-primary-fixed transition-all duration-200 font-title-sm text-title-sm rounded-lg shadow-md hover:shadow-[0_0_20px_rgba(255,94,20,0.4)]" id="open-add-member-btn" type="button">
+<span class="material-symbols-outlined text-[20px] font-bold">person_add</span>
+<span>+ Add New Member</span>
+</button>
+</div>
+</div>
+<!-- Operational Metric Telemetry Cards -->
+<div class="px-gutter py-space-lg grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Registered</span>
+<span class="p-1.5 bg-surface-container-lowest text-primary rounded-lg">
+<span class="material-symbols-outlined text-[18px]">sports_martial_arts</span>
+</span>
+</div>
+<div class="flex items-baseline justify-between mt-2">
+<span class="font-metric-display text-metric-display text-on-surface font-headline-xl">1,482</span>
+<div class="flex items-center gap-1 px-space-xs py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span>+12.4% MoM</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Capacity Threshold</span>
+<span class="text-tertiary font-semibold">91.8% Optimized</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 74%;"></div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active Status</span>
+<span class="p-1.5 bg-surface-container-lowest text-tertiary rounded-lg">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</span>
+</div>
+<div class="flex items-baseline justify-between mt-2">
+<span class="font-metric-display text-metric-display text-on-surface font-headline-xl">1,310</span>
+<div class="flex items-center gap-1 px-space-xs py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">fitness_center</span>
+<span>88.4% Health</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Daily Floor Traffic</span>
+<span class="text-on-surface font-semibold">614 check-ins today</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 88.4%;"></div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Pending Renewals</span>
+<span class="p-1.5 bg-surface-container-lowest text-primary rounded-lg">
+<span class="material-symbols-outlined text-[18px]">notification_important</span>
+</span>
+</div>
+<div class="flex items-baseline justify-between mt-2">
+<span class="font-metric-display text-metric-display text-on-surface font-headline-xl">48</span>
+<div class="flex items-center gap-1 px-space-xs py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>18 This Week</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Estimated Recovery</span>
+<span class="text-primary font-semibold">$5,240 MRR At Risk</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 32%;"></div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container p-space-lg rounded-xl shadow-md relative overflow-hidden group hover:bg-surface-container-high transition-colors">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Frozen / Inactive</span>
+<span class="p-1.5 bg-surface-container-lowest text-outline rounded-lg">
+<span class="material-symbols-outlined text-[18px]">pause_circle</span>
+</span>
+</div>
+<div class="flex items-baseline justify-between mt-2">
+<span class="font-metric-display text-metric-display text-on-surface font-headline-xl">124</span>
+<div class="flex items-center gap-1 px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-bold">
+<span>8.3% of Roster</span>
+</div>
+</div>
+<div class="mt-space-md flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Medical / Travel Holds</span>
+<span class="text-on-surface font-semibold">92 Athletes</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-outline-variant h-full rounded-full" style="width: 8.3%;"></div>
+</div>
+</div>
+</div>
+<!-- Filters, Query Bar & Segmentation Hub -->
+<div class="px-gutter pb-space-md flex flex-col gap-space-md">
+<!-- Status Segment Tabs -->
+<div class="flex flex-wrap items-center gap-space-xs bg-surface-container-low p-space-xs rounded-xl shadow-sm overflow-x-auto">
+<button class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm bg-surface-container-high text-primary-container shadow-sm flex items-center gap-space-xs">
+<span>All Members</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container-highest text-on-surface text-label-sm font-label-sm">1,482</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-space-xs">
+<span>Active</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-tertiary text-label-sm font-label-sm font-bold">1,310</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-space-xs">
+<span>Expiring Soon</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-primary text-label-sm font-label-sm font-bold">48</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-space-xs">
+<span>Pending Payment</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-error text-label-sm font-label-sm font-bold">34</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors flex items-center gap-space-xs">
+<span>Inactive / Frozen</span>
+<span class="px-1.5 py-0.2 rounded-full bg-surface-container text-outline text-label-sm font-label-sm font-bold">124</span>
+</button>
+</div>
+<!-- Live Filter Bar Row -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md bg-surface-container p-space-md rounded-xl shadow-sm">
+<!-- Search Input Container -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-11 pl-11 pr-20 bg-surface-container-lowest text-on-surface placeholder:text-outline-variant rounded-lg font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container shadow-inner" id="athlete-search" placeholder="Search by athlete name, email, phone, or RFID card ID..." type="text"/>
+<div class="absolute right-space-sm top-1/2 -translate-y-1/2 flex items-center gap-1">
+<kbd class="font-label-sm text-label-sm bg-surface-container px-1.5 py-0.5 rounded text-outline uppercase">Ctrl + F</kbd>
+</div>
+</div>
+<!-- Dropdown Filter Controls -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Tier Dropdown -->
+<div class="relative">
+<select class="appearance-none h-11 pl-space-md pr-9 bg-surface-container-lowest text-on-surface font-title-sm text-title-sm rounded-lg outline-none cursor-pointer hover:bg-surface-container-high transition-colors">
+<option>All Membership Tiers</option>
+<option>Black VIP ($120/mo)</option>
+<option>Elite Strength ($89/mo)</option>
+<option>Basic Starter ($49/mo)</option>
+<option>Day Pass</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">keyboard_arrow_down</span>
+</div>
+<!-- Coach Dropdown -->
+<div class="relative">
+<select class="appearance-none h-11 pl-space-md pr-9 bg-surface-container-lowest text-on-surface font-title-sm text-title-sm rounded-lg outline-none cursor-pointer hover:bg-surface-container-high transition-colors">
+<option>All Assigned Coaches</option>
+<option>Marcus Vance</option>
+<option>Sarah Jenkins</option>
+<option>Alex Rivera</option>
+<option>Dave Miller</option>
+<option>Unassigned</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">keyboard_arrow_down</span>
+</div>
+<!-- Sorting -->
+<div class="relative">
+<select class="appearance-none h-11 pl-space-md pr-9 bg-surface-container-lowest text-on-surface font-title-sm text-title-sm rounded-lg outline-none cursor-pointer hover:bg-surface-container-high transition-colors">
+<option>Sort: Newest First</option>
+<option>Sort: Name (A-Z)</option>
+<option>Sort: Renewal Date</option>
+<option>Sort: Last Active</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">sort</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Roster Layout: Split Grid with Side Drawer Target -->
+<div class="px-gutter pb-space-xl flex flex-col relative">
+<div class="w-full bg-surface-container rounded-xl shadow-xl overflow-hidden flex flex-col">
+<!-- Data Table Frame -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-outline font-label-sm text-label-sm uppercase tracking-wider select-none">
+<th class="py-space-md pl-space-md pr-space-xs w-10">
+<input class="w-4 h-4 rounded bg-surface-container-lowest accent-primary-container cursor-pointer" id="select-all" type="checkbox"/>
+</th>
+<th class="py-space-md px-space-sm font-bold">Athlete / Member ID</th>
+<th class="py-space-md px-space-sm font-bold">Contact &amp; Emergency</th>
+<th class="py-space-md px-space-sm font-bold">Tier / Rate</th>
+<th class="py-space-md px-space-sm font-bold">Billing &amp; Renewal</th>
+<th class="py-space-md px-space-sm font-bold">Last Floor Check-in</th>
+<th class="py-space-md px-space-sm font-bold">Coach Assignment</th>
+<th class="py-space-md px-space-sm font-bold">Status</th>
+<th class="py-space-md pr-space-md pl-space-sm text-right font-bold">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-lowest font-body-md text-body-md text-on-surface">
+<!-- Row 1: Sarah Jenkins -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input class="member-checkbox w-4 h-4 rounded bg-surface-container-lowest accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-primary-container/20 flex items-center justify-center shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Intense high-definition sports portrait of Sarah Jenkins, an athletic female runner in black gym attire, illuminated by high-contrast studio orange and charcoal ambient rim lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGduM2Sxqa30UK58Z3pEvBC1YYh8LNq5B5pFn4K3mT0Uh1ABkh-A_MefIHpNbtHyU3JXY1STsZVUX5-jbHoay0bnf1GXegVw9AwLb6Jdz1wOvNCJGujUXv5221Bl9gX3kPw_nf3LEGEv1DviD8dlRytwjLyRBIScEhuHbwYR5QHBkjuH9ZGhR4ADYx5I8-bkHyXtpCdLb9sZLj4_SRYDjNWKsR9qo5GovAVwoxV_k"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary-container transition-colors">Sarah Jenkins</span>
+<div class="flex items-center gap-1.5 text-outline text-body-sm font-body-sm">
+<span class="text-primary font-mono text-[11px] font-bold">#IP-1042</span>
+<span>•</span>
+<span class="truncate">sarah.j@gmail.com</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">(555) 234-8901</span>
+<span class="text-outline text-[11px]">ICE: David (Spouse)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest text-primary-fixed-dim font-title-sm text-[12px] font-bold shadow-inner">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                  Black VIP • $120/mo
+                </span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-on-surface">Renews Nov 28, 2025</span>
+<span class="text-outline text-[11px]">Joined Jan 14, 2023 (Auto-debit)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-title-sm text-title-sm text-on-surface font-medium">Today, 08:15 AM</span>
+</div>
+<span class="text-outline text-[11px] block pl-3.5">Zone: Powerlifting Bay</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-[10px] font-bold flex items-center justify-center text-on-surface">MV</span>
+<span class="font-title-sm text-title-sm text-on-surface">Marcus Vance</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-outline">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container-lowest rounded-lg transition-colors" title="View Member Profile">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container-lowest rounded-lg transition-colors" title="Scan NFC / Pass">
+<span class="material-symbols-outlined text-[18px]">nfc</span>
+</button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container-lowest rounded-lg transition-colors" title="Edit Record">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: David Kalu -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input class="member-checkbox w-4 h-4 rounded bg-surface-container-lowest accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-surface-container-highest flex items-center justify-center shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Moody cinematic portrait of David Kalu, a focused athletic male crossfit trainer, strong jawline, warm amber dramatic key lighting on obsidian charcoal dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABx4O7OEsJTcWFNjk7fbXxOnVZfVrS8YdXphsSU2-jreW2jO_rWOp-Axc5drlZ8LhGJSjaLc73dTIO1nWw0RQ1M__XQdKwzhnwNVy8FLIRHWZv9Du7TUdBQuHwgV2ZWsOWAR2xtD3z0Hqml7p541xDQpykFPpc0jD9AlEeW8FkhXwP92tMyH3NtV5J8U0I21EDYhd7EyutXavVjdOh8ZWGveEI_FO6hgbHy04Vrx0"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary-container transition-colors">David Kalu</span>
+<div class="flex items-center gap-1.5 text-outline text-body-sm font-body-sm">
+<span class="text-primary font-mono text-[11px] font-bold">#IP-1108</span>
+<span>•</span>
+<span class="truncate">d.kalu@fitmail.com</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">(555) 345-9812</span>
+<span class="text-outline text-[11px]">ICE: Amara (Sister)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest text-secondary-fixed-dim font-title-sm text-[12px] font-bold shadow-inner">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+                  Elite Strength • $89/mo
+                </span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-on-surface">Renews Dec 15, 2025</span>
+<span class="text-outline text-[11px]">Joined Mar 02, 2023 (Visa)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-title-sm text-title-sm text-on-surface font-medium">Today, 10:45 AM</span>
+</div>
+<span class="text-outline text-[11px] block pl-3.5">Zone: Cardio Loft</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-[10px] font-bold flex items-center justify-center text-on-surface">SV</span>
+<span class="font-title-sm text-title-sm text-on-surface">Sarah V.</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-outline">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container-lowest rounded-lg transition-colors" title="View Member Profile">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container-lowest rounded-lg transition-colors" title="Scan NFC / Pass">
+<span class="material-symbols-outlined text-[18px]">nfc</span>
+</button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container-lowest rounded-lg transition-colors" title="Edit Record">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Elena Rostova -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group bg-surface-container-lowest/30">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input class="member-checkbox w-4 h-4 rounded bg-surface-container-lowest accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 bg-surface-container-highest flex items-center justify-center shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Athletic portrait of Elena Rostova with sleek hair, wearing minimal sports gear in a dark high-tech fitness studio with subtle neon orange and slate reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyxbcL7z51Bmz5yuPYYs05GsYxxOgStW84Kikv8BFxuOu4_D9ja4O4auv1J_FOsCpHCRqvKTkPPfo8NAE6VYOxI19zNeR5SgJ7Ac_9nPbjacMOGm2bNcNHES3N8QA4aGiWbcsOBK0H9apMknRbqmYAsG_YCao-ZLWo_2UChNdryDWf22RPGghw_cvJg8siGmcR1UX71epI-WBpxdMRJhZWpot_538LTv814Uyat2g"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary-container transition-colors">Elena Rostova</span>
+<div class="flex items-center gap-1.5 text-outline text-body-sm font-body-sm">
+<span class="text-primary font-mono text-[11px] font-bold">#IP-0982</span>
+<span>•</span>
+<span class="truncate">elena.r@outlook.com</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">(555) 876-1209</span>
+<span class="text-outline text-[11px]">ICE: Mikhail (Father)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface-variant font-title-sm text-[12px] font-bold shadow-inner">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+                  Basic Starter • $49/mo
+                </span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-primary font-semibold">Expires in 3 Days</span>
+<span class="text-outline text-[11px]">Due Nov 24, 2024</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-title-sm text-title-sm text-on-surface font-medium">Yesterday, 18:20</span>
+</div>
+<span class="text-outline text-[11px] block pl-3.5">Zone: Free Weights</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-body-sm text-body-sm text-outline italic">Unassigned</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-primary-container/20 text-primary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>
+                  Expiring Soon
+                </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-outline">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container-lowest rounded-lg transition-colors" title="View Member Profile">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 text-primary-container hover:bg-surface-container-lowest rounded-lg transition-colors" title="Fast Renew">
+<span class="material-symbols-outlined text-[18px]">cycle</span>
+</button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container-lowest rounded-lg transition-colors" title="Edit Record">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Marcus Chen -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input class="member-checkbox w-4 h-4 rounded bg-surface-container-lowest accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary font-headline-sm text-[14px] shadow-sm">
+                    MC
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary-container transition-colors">Marcus Chen</span>
+<div class="flex items-center gap-1.5 text-outline text-body-sm font-body-sm">
+<span class="text-primary font-mono text-[11px] font-bold">#IP-1402</span>
+<span>•</span>
+<span class="truncate">chen.fitness@gmail.com</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">(555) 901-4432</span>
+<span class="text-outline text-[11px]">ICE: Lisa Chen (Partner)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest text-primary-fixed-dim font-title-sm text-[12px] font-bold shadow-inner">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+                  Black VIP • $120/mo
+                </span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-on-surface">Renews Jan 10, 2026</span>
+<span class="text-outline text-[11px]">Annual Prepump (Corporate)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-title-sm text-title-sm text-on-surface font-medium">Today, 06:12 AM</span>
+</div>
+<span class="text-outline text-[11px] block pl-3.5">Zone: Olympic Lifting</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-[10px] font-bold flex items-center justify-center text-on-surface">AR</span>
+<span class="font-title-sm text-title-sm text-on-surface">Alex Rivera</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-outline">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container-lowest rounded-lg transition-colors" title="View Member Profile">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container-lowest rounded-lg transition-colors" title="Scan NFC / Pass">
+<span class="material-symbols-outlined text-[18px]">nfc</span>
+</button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container-lowest rounded-lg transition-colors" title="Edit Record">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Chloe Miller -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input class="member-checkbox w-4 h-4 rounded bg-surface-container-lowest accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-secondary font-headline-sm text-[14px] shadow-sm">
+                    CM
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary-container transition-colors">Chloe Miller</span>
+<div class="flex items-center gap-1.5 text-outline text-body-sm font-body-sm">
+<span class="text-primary font-mono text-[11px] font-bold">#IP-1294</span>
+<span>•</span>
+<span class="truncate">chloe.m@icloud.com</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">(555) 678-2341</span>
+<span class="text-outline text-[11px]">ICE: Rick Miller (Parent)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest text-secondary-fixed-dim font-title-sm text-[12px] font-bold shadow-inner">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+                  Elite Strength • $89/mo
+                </span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-on-surface">Renews Feb 19, 2025</span>
+<span class="text-outline text-[11px]">Joined Feb 19, 2024 (Mastercard)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-title-sm text-title-sm text-on-surface font-medium">2 days ago</span>
+</div>
+<span class="text-outline text-[11px] block pl-3.5">Zone: Turf Track</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-[10px] font-bold flex items-center justify-center text-on-surface">MV</span>
+<span class="font-title-sm text-title-sm text-on-surface">Marcus Vance</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Active
+                </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-outline">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container-lowest rounded-lg transition-colors" title="View Member Profile">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 hover:text-primary hover:bg-surface-container-lowest rounded-lg transition-colors" title="Scan NFC / Pass">
+<span class="material-symbols-outlined text-[18px]">nfc</span>
+</button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container-lowest rounded-lg transition-colors" title="Edit Record">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Jordan Reed -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group bg-surface-container-lowest/20 opacity-80">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input class="member-checkbox w-4 h-4 rounded bg-surface-container-lowest accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-outline font-headline-sm text-[14px] shadow-sm">
+                    JR
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary-container transition-colors">Jordan Reed</span>
+<div class="flex items-center gap-1.5 text-outline text-body-sm font-body-sm">
+<span class="text-primary font-mono text-[11px] font-bold">#IP-0845</span>
+<span>•</span>
+<span class="truncate">j.reed@apex.net</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">(555) 456-7890</span>
+<span class="text-outline text-[11px]">ICE: Clara Reed (Mother)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest text-outline font-title-sm text-[12px] font-bold shadow-inner">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+                  Black VIP • $120/mo
+                </span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-outline font-medium">Frozen until Dec 01</span>
+<span class="text-outline text-[11px]">Medical Pause Approved</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+<span class="font-title-sm text-title-sm text-outline font-medium">Oct 12, 2024</span>
+</div>
+<span class="text-outline text-[11px] block pl-3.5">Zone: Recovery Sauna</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="font-body-sm text-body-sm text-outline italic">Unassigned</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-highest text-outline font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Suspended / Frozen
+                </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-outline">
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container-lowest rounded-lg transition-colors" title="View Member Profile">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 hover:text-tertiary hover:bg-surface-container-lowest rounded-lg transition-colors" title="Unfreeze Member">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container-lowest rounded-lg transition-colors" title="Edit Record">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 7: Brandon Brooks -->
+<tr class="hover:bg-surface-container-high/60 transition-colors group">
+<td class="py-space-sm pl-space-md pr-space-xs">
+<input class="member-checkbox w-4 h-4 rounded bg-surface-container-lowest accent-primary-container cursor-pointer" type="checkbox"/>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-error-container/40 flex items-center justify-center font-bold text-error font-headline-sm text-[14px] shadow-sm">
+                    BB
+                  </div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-sm text-title-sm text-on-surface font-semibold truncate group-hover:text-primary-container transition-colors">Brandon Brooks</span>
+<div class="flex items-center gap-1.5 text-outline text-body-sm font-body-sm">
+<span class="text-primary font-mono text-[11px] font-bold">#IP-1549</span>
+<span>•</span>
+<span class="truncate">bbrooks@work.io</span>
+</div>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">(555) 789-0123</span>
+<span class="text-outline text-[11px]">ICE: Keith Brooks (Brother)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-lowest text-on-surface-variant font-title-sm text-[12px] font-bold shadow-inner">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+                  Basic Starter • $49/mo
+                </span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex flex-col text-body-sm font-body-sm">
+<span class="text-error font-semibold">Payment Failed</span>
+<span class="text-outline text-[11px]">2 Invoices Overdue ($98.00)</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-title-sm text-title-sm text-on-surface font-medium">5 days ago</span>
+</div>
+<span class="text-outline text-[11px] block pl-3.5">Zone: Heavy Bag Row</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-6 h-6 rounded-full bg-surface-container-highest text-[10px] font-bold flex items-center justify-center text-on-surface">DM</span>
+<span class="font-title-sm text-title-sm text-on-surface">Dave Miller</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-error-container/20 text-error font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Past Due
+                </span>
+</td>
+<td class="py-space-sm pr-space-md pl-space-sm text-right">
+<div class="inline-flex items-center gap-1 text-outline">
+<button class="p-1.5 text-error hover:bg-surface-container-lowest rounded-lg transition-colors" title="Collect Payment">
+<span class="material-symbols-outlined text-[18px]">credit_card_off</span>
+</button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container-lowest rounded-lg transition-colors" title="Send Payment Link">
+<span class="material-symbols-outlined text-[18px]">forward_to_inbox</span>
+</button>
+<button class="p-1.5 hover:text-on-surface hover:bg-surface-container-lowest rounded-lg transition-colors" title="Edit Record">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Footer Controls -->
+<div class="px-space-md py-space-sm bg-surface-container-high flex flex-col sm:flex-row items-center justify-between gap-space-sm border-t border-surface-container-lowest">
+<div class="flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant">
+<span>Showing <strong class="text-on-surface">1 - 7</strong> of <strong class="text-on-surface">1,482</strong> athletes</span>
+<div class="flex items-center gap-space-xs">
+<span>Rows per page:</span>
+<select class="bg-surface-container-lowest text-on-surface px-space-xs py-1 rounded outline-none font-title-sm text-title-sm cursor-pointer">
+<option>10</option>
+<option>25</option>
+<option>50</option>
+<option>100</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1.5 rounded bg-surface-container text-outline hover:text-on-surface hover:bg-surface-container-highest transition-colors disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">first_page</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container text-outline hover:text-on-surface hover:bg-surface-container-highest transition-colors disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<div class="flex items-center gap-1 px-space-xs">
+<button class="w-8 h-8 rounded bg-primary-container text-on-primary-container font-title-sm text-title-sm font-bold flex items-center justify-center">1</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-on-surface font-title-sm text-title-sm flex items-center justify-center transition-colors">2</button>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-on-surface font-title-sm text-title-sm flex items-center justify-center transition-colors">3</button>
+<span class="text-outline px-1">...</span>
+<button class="w-8 h-8 rounded hover:bg-surface-container text-on-surface font-title-sm text-title-sm flex items-center justify-center transition-colors">149</button>
+</div>
+<button class="p-1.5 rounded bg-surface-container text-outline hover:text-on-surface hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container text-outline hover:text-on-surface hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-[18px]">last_page</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Slide-over Drawer / Modal: Add New Member Registration -->
+<div class="fixed inset-0 bg-surface-container-lowest/80 backdrop-blur-md z-50 hidden transition-opacity duration-300" id="add-member-drawer-backdrop">
+<div class="fixed top-0 right-0 h-full w-full max-w-2xl bg-surface-container shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300 ease-out z-50" id="add-member-drawer">
+<!-- Drawer Header -->
+<div class="h-20 px-space-lg bg-surface-container-low flex items-center justify-between border-b border-surface-container-high">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container/20 text-primary-container flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-[24px]">person_add</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Add New Member Registration</h2>
+<span class="font-label-sm text-label-sm text-outline-variant">Deploy digital pass, RFID access, and assign trainer program</span>
+</div>
+</div>
+<button class="w-9 h-9 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" id="close-drawer-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Drawer Content Scroll Area -->
+<div class="flex-1 overflow-y-auto p-space-lg space-y-space-lg">
+<!-- Registration Form Steps / Sections -->
+<form class="space-y-space-lg" id="new-member-form">
+<!-- Section 1: Personal Profile -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container-high">
+<span class="font-title-sm text-title-sm text-primary font-bold uppercase tracking-wider flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary-container text-[11px] flex items-center justify-center font-bold">1</span>
+                Personal Information
+              </span>
+<span class="font-label-sm text-label-sm text-outline">Fields marked * required</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Full Name *</label>
+<input class="w-full h-10 px-space-md bg-surface-container-lowest text-on-surface placeholder:text-outline-variant rounded-lg font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container" placeholder="e.g. Cameron Chase" required="" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Email Address *</label>
+<input class="w-full h-10 px-space-md bg-surface-container-lowest text-on-surface placeholder:text-outline-variant rounded-lg font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container" placeholder="cameron@example.com" required="" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Phone Number *</label>
+<input class="w-full h-10 px-space-md bg-surface-container-lowest text-on-surface placeholder:text-outline-variant rounded-lg font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container" placeholder="(555) 000-0000" required="" type="tel"/>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Date of Birth</label>
+<input class="w-full h-10 px-space-sm bg-surface-container-lowest text-on-surface rounded-lg font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container" type="date" value="1996-05-14"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Gender</label>
+<select class="w-full h-10 px-space-sm bg-surface-container-lowest text-on-surface rounded-lg font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container">
+<option>Male</option>
+<option>Female</option>
+<option>Non-Binary</option>
+<option>Prefer not to say</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Emergency Contact -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container-high">
+<span class="font-title-sm text-title-sm text-primary font-bold uppercase tracking-wider flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary-container text-[11px] flex items-center justify-center font-bold">2</span>
+                Emergency Contact (ICE)
+              </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Contact Name</label>
+<input class="w-full h-10 px-space-md bg-surface-container-lowest text-on-surface placeholder:text-outline-variant rounded-lg font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container" placeholder="Full name" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Relationship</label>
+<input class="w-full h-10 px-space-md bg-surface-container-lowest text-on-surface placeholder:text-outline-variant rounded-lg font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container" placeholder="e.g. Spouse / Parent" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Emergency Phone</label>
+<input class="w-full h-10 px-space-md bg-surface-container-lowest text-on-surface placeholder:text-outline-variant rounded-lg font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container" placeholder="(555) 999-1122" type="tel"/>
+</div>
+</div>
+</div>
+<!-- Section 3: Membership Plan Selection -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container-high">
+<span class="font-title-sm text-title-sm text-primary font-bold uppercase tracking-wider flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary-container text-[11px] flex items-center justify-center font-bold">3</span>
+                Select Membership Tier
+              </span>
+<span class="font-label-sm text-label-sm text-tertiary">All include app sync</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<!-- Tier 1 -->
+<label class="relative flex flex-col p-space-md bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container-high transition-all border border-transparent has-[:checked]:border-outline">
+<input class="sr-only" name="plan_tier" type="radio" value="basic"/>
+<span class="font-title-sm text-title-sm text-on-surface">Basic Starter</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">$49<span class="text-body-sm text-outline font-normal">/mo</span></span>
+<span class="text-[11px] text-outline mt-2 leading-tight">Floor access, standard locker, 06:00 - 22:00</span>
+</label>
+<!-- Tier 2 -->
+<label class="relative flex flex-col p-space-md bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container-high transition-all border border-transparent has-[:checked]:border-secondary-container">
+<input checked="" class="sr-only" name="plan_tier" type="radio" value="elite"/>
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-secondary-fixed-dim font-bold">Elite Strength</span>
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">$89<span class="text-body-sm text-outline font-normal">/mo</span></span>
+<span class="text-[11px] text-outline mt-2 leading-tight">24/7 Access, sauna, 2 monthly coach evaluations</span>
+</label>
+<!-- Tier 3 -->
+<label class="relative flex flex-col p-space-md bg-surface-container-lowest rounded-xl cursor-pointer hover:bg-surface-container-high transition-all border-2 border-primary-container shadow-[0_0_12px_rgba(255,94,20,0.2)]">
+<input class="sr-only" name="plan_tier" type="radio" value="vip"/>
+<div class="flex items-center justify-between">
+<span class="font-title-sm text-title-sm text-primary font-bold">Black VIP</span>
+<span class="material-symbols-outlined text-[16px] text-primary-container">stars</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-1">$120<span class="text-body-sm text-outline font-normal">/mo</span></span>
+<span class="text-[11px] text-outline mt-2 leading-tight">All-Inclusive: Unlimited classes, private locker, laundry</span>
+</label>
+</div>
+<!-- Parameters Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-2">
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Start Date</label>
+<input class="w-full h-10 px-space-md bg-surface-container-lowest text-on-surface rounded-lg font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container" type="date" value="2024-11-20"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Contract Commitment</label>
+<select class="w-full h-10 px-space-md bg-surface-container-lowest text-on-surface rounded-lg font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container">
+<option>12-Month Lock-in (Save 15%)</option>
+<option>Month-to-Month Rolling</option>
+<option>Paid in Full 2-Year VIP</option>
+</select>
+</div>
+</div>
+<!-- Locker Add-on Toggle -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-lowest rounded-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-outline text-[20px]">lock_open</span>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Assign Dedicated Locker</span>
+<span class="font-label-sm text-label-sm text-outline">Permanent bay rental in North Wing ($15/mo)</span>
+</div>
+</div>
+<input class="w-32 h-8 px-space-sm bg-surface-container text-on-surface placeholder:text-outline-variant rounded font-body-sm text-body-sm outline-none text-center" placeholder="Locker # e.g. B-104" type="text"/>
+</div>
+</div>
+<!-- Section 4: Trainer Assignment & Hardware Access ID -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container-high">
+<span class="font-title-sm text-title-sm text-primary font-bold uppercase tracking-wider flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary-container text-[11px] flex items-center justify-center font-bold">4</span>
+                Coaching &amp; RFID Pass Provisioning
+              </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">Assigned Performance Coach</label>
+<select class="w-full h-10 px-space-md bg-surface-container-lowest text-on-surface rounded-lg font-body-sm text-body-sm outline-none focus:ring-1 focus:ring-primary-container">
+<option>Marcus Vance (Head Trainer - 18/20)</option>
+<option>Sarah Jenkins (Strength Specialist - 12/20)</option>
+<option>Alex Rivera (Cardio / Hyrox - 15/20)</option>
+<option>Dave Miller (Boxing &amp; Conditioning - 8/20)</option>
+<option selected="">No Coach Assigned (Self-guided)</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-md text-label-md text-on-surface-variant">NFC Wristband / RFID Card</label>
+<div class="flex items-center gap-space-xs">
+<input class="flex-1 h-10 px-space-md bg-surface-container-lowest font-mono text-primary font-bold rounded-lg font-body-sm text-body-sm outline-none" id="rfid-tag-input" type="text" value="RFID-88219"/>
+<button class="h-10 px-space-md bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm rounded-lg transition-colors flex items-center gap-1" id="scan-rfid-btn" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">contactless</span>
+<span>Pair</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 5: Payment Details -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container-high">
+<span class="font-title-sm text-title-sm text-primary font-bold uppercase tracking-wider flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-primary-container text-on-primary-container text-[11px] flex items-center justify-center font-bold">5</span>
+                Initial Payment &amp; Billing Cycle
+              </span>
+<span class="font-label-sm text-label-sm text-tertiary">Stripe Vault 256-Bit</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<label class="flex items-center justify-center gap-2 p-space-sm bg-surface-container-lowest rounded-lg cursor-pointer hover:bg-surface-container-high border border-outline">
+<input checked="" class="accent-primary-container" name="payment_method" type="radio" value="cc"/>
+<span class="font-title-sm text-title-sm text-on-surface">Credit / Debit</span>
+</label>
+<label class="flex items-center justify-center gap-2 p-space-sm bg-surface-container-lowest rounded-lg cursor-pointer hover:bg-surface-container-high">
+<input class="accent-primary-container" name="payment_method" type="radio" value="ach"/>
+<span class="font-title-sm text-title-sm text-on-surface">Direct Debit</span>
+</label>
+<label class="flex items-center justify-center gap-2 p-space-sm bg-surface-container-lowest rounded-lg cursor-pointer hover:bg-surface-container-high">
+<input class="accent-primary-container" name="payment_method" type="radio" value="cash"/>
+<span class="font-title-sm text-title-sm text-on-surface">Cash / Front Desk</span>
+</label>
+</div>
+<div class="flex items-center justify-between p-space-sm bg-surface-container-lowest rounded-lg mt-2">
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-on-surface">Waive Initiation Setup Fee ($50.00)</span>
+<span class="font-label-sm text-label-sm text-outline">Manager promotional authorization</span>
+</div>
+<input checked="" class="w-5 h-5 accent-primary-container rounded cursor-pointer" type="checkbox"/>
+</div>
+</div>
+</form>
+</div>
+<!-- Drawer Action Footer -->
+<div class="h-20 px-space-lg bg-surface-container-low flex items-center justify-between border-t border-surface-container-high">
+<button class="px-space-lg py-space-sm bg-surface-container hover:bg-surface-container-high text-on-surface font-title-sm text-title-sm rounded-lg transition-colors" id="cancel-drawer-btn" type="button">
+          Cancel
+        </button>
+<button class="flex items-center gap-space-xs px-space-xl py-space-sm bg-primary-container text-on-primary-container hover:bg-primary-fixed-dim hover:text-on-primary-fixed font-title-sm text-title-sm rounded-lg shadow-lg hover:shadow-[0_0_20px_rgba(255,94,20,0.45)] transition-all" id="submit-member-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Register &amp; Issue Pass</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+    (function () {
+      // Highlight sidebar active state
+      const navLinks = document.querySelectorAll('aside nav a');
+      navLinks.forEach((link) => {
+        if (link.getAttribute('data-path') === 'members') {
+          link.classList.add('bg-surface-container-high', 'text-primary', 'font-bold', 'shadow-[inset_3px_0_0_0_#ff5e14]');
+          link.classList.remove('text-on-surface-variant');
+        } else {
+          link.classList.remove('bg-surface-container-high', 'text-primary', 'font-bold', 'shadow-[inset_3px_0_0_0_#ff5e14]');
+        }
+      });
+
+      // Slide-over drawer logic
+      const openBtn = document.getElementById('open-add-member-btn');
+      const closeBtn = document.getElementById('close-drawer-btn');
+      const cancelBtn = document.getElementById('cancel-drawer-btn');
+      const submitBtn = document.getElementById('submit-member-btn');
+      const backdrop = document.getElementById('add-member-drawer-backdrop');
+      const drawer = document.getElementById('add-member-drawer');
+
+      function openDrawer() {
+        backdrop.classList.remove('hidden');
+        setTimeout(() => {
+          drawer.classList.remove('translate-x-full');
+        }, 10);
+      }
+
+      function closeDrawer() {
+        drawer.classList.add('translate-x-full');
+        setTimeout(() => {
+          backdrop.classList.add('hidden');
+        }, 300);
+      }
+
+      if (openBtn) openBtn.addEventListener('click', openDrawer);
+      if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+      if (cancelBtn) cancelBtn.addEventListener('click', closeDrawer);
+      if (backdrop) {
+        backdrop.addEventListener('click', (e) => {
+          if (e.target === backdrop) closeDrawer();
+        });
+      }
+
+      if (submitBtn) {
+        submitBtn.addEventListener('click', () => {
+          submitBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Issuing Access...</span>';
+          setTimeout(() => {
+            alert('Member registered successfully! Digital pass RFID-88219 activated.');
+            submitBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">verified_user</span><span>Register & Issue Pass</span>';
+            closeDrawer();
+          }, 700);
+        });
+      }
+
+      // Quick RFID Scan Simulator
+      const scanBtn = document.getElementById('scan-rfid-btn');
+      const rfidInput = document.getElementById('rfid-tag-input');
+      if (scanBtn && rfidInput) {
+        scanBtn.addEventListener('click', () => {
+          const randHex = Math.floor(10000 + Math.random() * 90000);
+          rfidInput.value = 'RFID-' + randHex;
+          rfidInput.classList.add('text-tertiary');
+          setTimeout(() => rfidInput.classList.remove('text-tertiary'), 1000);
+        });
+      }
+
+      // Bulk Actions Dropdown Toggle
+      const bulkBtn = document.getElementById('bulk-actions-btn');
+      const bulkDropdown = document.getElementById('bulk-dropdown');
+      if (bulkBtn && bulkDropdown) {
+        bulkBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          bulkDropdown.classList.toggle('hidden');
+        });
+        document.addEventListener('click', () => {
+          bulkDropdown.classList.add('hidden');
+        });
+      }
+
+      // Select All Checkbox
+      const selectAll = document.getElementById('select-all');
+      const rowCheckboxes = document.querySelectorAll('.member-checkbox');
+      if (selectAll) {
+        selectAll.addEventListener('change', () => {
+          rowCheckboxes.forEach((cb) => (cb.checked = selectAll.checked));
+        });
+      }
+
+      // Athlete Search Filter simulation
+      const searchInput = document.getElementById('athlete-search');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const term = e.target.value.toLowerCase();
+          const rows = document.querySelectorAll('tbody tr');
+          rows.forEach((row) => {
+            const text = row.innerText.toLowerCase();
+            row.style.display = text.includes(term) ? '' : 'none';
+          });
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

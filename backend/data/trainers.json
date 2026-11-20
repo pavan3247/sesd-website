@@ -1,0 +1,87 @@
+[
+  {
+    "id": "TR-001",
+    "name": "Marcus Vance",
+    "specialization": "Strength & Conditioning / Powerlifting",
+    "email": "marcus.v@fitzone.com",
+    "phone": "+91 98201 12345",
+    "experience": "8 Years",
+    "rating": 4.9,
+    "assignedMembers": [
+      "Vikram Malhotra",
+      "Arjun Reddy",
+      "Rohan Gupta",
+      "Siddharth Mehta"
+    ],
+    "bio": "Certified CSCS trainer with national powerlifting coaching credentials.",
+    "status": "Active"
+  },
+  {
+    "id": "TR-002",
+    "name": "Sarah Jenkins",
+    "specialization": "HIIT, CrossFit & Spin Cycling",
+    "email": "sarah.j@fitzone.com",
+    "phone": "+91 98202 23456",
+    "experience": "6 Years",
+    "rating": 4.8,
+    "assignedMembers": [
+      "Priya Sharma",
+      "Ananya Iyer",
+      "Tanvi Kapoor",
+      "Meera Nambiar"
+    ],
+    "bio": "High-intensity metabolic conditioning specialist and marathon finisher.",
+    "status": "Active"
+  },
+  {
+    "id": "TR-003",
+    "name": "Devraj Singh",
+    "specialization": "Hypertrophy & Competitive Bodybuilding",
+    "email": "devraj.s@fitzone.com",
+    "phone": "+91 98203 34567",
+    "experience": "10 Years",
+    "rating": 4.9,
+    "assignedMembers": [
+      "Rahul Verma",
+      "Sameer Khan",
+      "Kabir Bedi",
+      "Devendra Rathore"
+    ],
+    "bio": "Mr. India competitor and biomechanics posture specialist.",
+    "status": "Active"
+  },
+  {
+    "id": "TR-004",
+    "name": "Elena Rostova",
+    "specialization": "Yoga, Core Mobility & Flexibility",
+    "email": "elena.r@fitzone.com",
+    "phone": "+91 98204 45678",
+    "experience": "5 Years",
+    "rating": 4.7,
+    "assignedMembers": [
+      "Sneha Patel",
+      "Kavya Nair",
+      "Ritu Deshmukh",
+      "Pooja Joshi"
+    ],
+    "bio": "500-hr RYT yoga master focused on mobility recovery and athletic flexibility.",
+    "status": "Active"
+  },
+  {
+    "id": "TR-005",
+    "name": "Kabir Khan",
+    "specialization": "Functional Movement & Injury Rehabilitation",
+    "email": "kabir.k@fitzone.com",
+    "phone": "+91 98205 56789",
+    "experience": "7 Years",
+    "rating": 4.8,
+    "assignedMembers": [
+      "Rohit Sen",
+      "Aditya Chopra",
+      "Karan Singhania",
+      "Yashvardhan Roy"
+    ],
+    "bio": "Sports physical therapy background specializing in rotator cuff and ACL rehab.",
+    "status": "Active"
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "WK-001",
+    "planName": "Hypertrophy Push-Pull-Legs (PPL)",
+    "memberName": "Vikram Malhotra",
+    "memberId": "FZ-2026-0001",
+    "trainerName": "Marcus Vance",
+    "duration": "60 mins",
+    "difficulty": "Advanced",
+    "targetGoal": "Muscle Mass & Raw Strength",
+    "exercises": [
+      { "name": "Barbell Incline Bench Press", "sets": "4", "reps": "8-10", "weight": "80 kg", "target": "Chest/Front Delts" },
+      { "name": "Dumbbell Overhead Shoulder Press", "sets": "3", "reps": "10-12", "weight": "24 kg", "target": "Shoulders" },
+      { "name": "Weighted Dips", "sets": "3", "reps": "12", "weight": "Bodyweight + 15 kg", "target": "Triceps/Chest" },
+      { "name": "Cable Overhead Tricep Extension", "sets": "4", "reps": "15", "weight": "25 kg", "target": "Triceps" }
+    ]
+  },
+  {
+    "id": "WK-002",
+    "planName": "Metabolic Conditioning & Core Blitz",
+    "memberName": "Priya Sharma",
+    "memberId": "FZ-2026-0002",
+    "trainerName": "Sarah Jenkins",
+    "duration": "45 mins",
+    "difficulty": "Intermediate",
+    "targetGoal": "Fat Loss & Aerobic Stamina",
+    "exercises": [
+      { "name": "Kettlebell Swing Intervals", "sets": "5", "reps": "20", "weight": "16 kg", "target": "Posterior Chain" },
+      { "name": "Assault Bike Sprint Intervals", "sets": "6", "reps": "30s on / 30s off", "weight": "High Resistance", "target": "Full Body Cardio" },
+      { "name": "Box Jumps & Burpee Combos", "sets": "4", "reps": "15", "weight": "Bodyweight", "target": "Explosive Legs" },
+      { "name": "Hanging Knee-to-Elbow Raises", "sets": "3", "reps": "15", "weight": "Bodyweight", "target": "Core/Abs" }
+    ]
+  },
+  {
+    "id": "WK-003",
+    "planName": "Heavy Deadlift & Posterior Chain Focus",
+    "memberName": "Arjun Reddy",
+    "memberId": "FZ-2026-0007",
+    "trainerName": "Marcus Vance",
+    "duration": "75 mins",
+    "difficulty": "Advanced",
+    "targetGoal": "Powerlifting Peak Strength",
+    "exercises": [
+      { "name": "Conventional Barbell Deadlift", "sets": "5", "reps": "5", "weight": "140 kg", "target": "Back/Glutes/Hamstrings" },
+      { "name": "Barbell Hip Thrusts", "sets": "4", "reps": "10", "weight": "120 kg", "target": "Glutes" },
+      { "name": "Chest-Supported T-Bar Rows", "sets": "4", "reps": "8-10", "weight": "60 kg", "target": "Lats/Upper Back" },
+      { "name": "Nordic Hamstring Curls", "sets": "3", "reps": "8", "weight": "Bodyweight", "target": "Hamstrings" }
+    ]
+  },
+  {
+    "id": "WK-004",
+    "planName": "Athletic Mobility & Spinal Decompression",
+    "memberName": "Sneha Patel",
+    "memberId": "FZ-2026-0006",
+    "trainerName": "Elena Rostova",
+    "duration": "45 mins",
+    "difficulty": "Beginner",
+    "targetGoal": "Flexibility & Posture Correction",
+    "exercises": [
+      { "name": "Thoracic Spine Foam Rolling & Cat-Cow", "sets": "3", "reps": "12", "weight": "Bodyweight", "target": "Spine Mobility" },
+      { "name": "Deep 90/90 Hip Mobility Flow", "sets": "3", "reps": "10 per side", "weight": "Bodyweight", "target": "Hips" },
+      { "name": "Kettlebell Goblet Squat Isometric Holds", "sets": "3", "reps": "45s hold", "weight": "12 kg", "target": "Hip/Ankle Mobility" },
+      { "name": "Bird Dogs & Pallof Press", "sets": "3", "reps": "12 per side", "weight": "Resistance Band", "target": "Core Stability" }
+    ]
+  },
+  {
+    "id": "WK-005",
+    "planName": "Functional Hypertrophy & Arms Protocol",
+    "memberName": "Rahul Verma",
+    "memberId": "FZ-2026-0003",
+    "trainerName": "Devraj Singh",
+    "duration": "55 mins",
+    "difficulty": "Intermediate",
+    "targetGoal": "Biceps, Triceps & Upper Body Size",
+    "exercises": [
+      { "name": "EZ-Bar Preacher Curls", "sets": "4", "reps": "10-12", "weight": "35 kg", "target": "Biceps" },
+      { "name": "Skull Crushers (Lying Tricep Ext)", "sets": "4", "reps": "10-12", "weight": "30 kg", "target": "Triceps Long Head" },
+      { "name": "Incline Dumbbell Hammer Curls", "sets": "3", "reps": "12", "weight": "16 kg", "target": "Brachialis/Forearms" },
+      { "name": "Cable Rope Tricep Pushdowns", "sets": "4", "reps": "15", "weight": "30 kg", "target": "Triceps Lateral Head" }
+    ]
+  },
+  {
+    "id": "WK-006",
+    "planName": "Rotator Cuff & Shoulder Rehabilitation",
+    "memberName": "Rohit Sen",
+    "memberId": "FZ-2026-0005",
+    "trainerName": "Kabir Khan",
+    "duration": "40 mins",
+    "difficulty": "Beginner",
+    "targetGoal": "Joint Recovery & Injury Prevention",
+    "exercises": [
+      { "name": "Cable External & Internal Rotations", "sets": "3", "reps": "15", "weight": "5 kg", "target": "Infraspinatus/Teres Minor" },
+      { "name": "Face Pulls with External Rotation", "sets": "4", "reps": "15", "weight": "15 kg", "target": "Rear Delts/Traps" },
+      { "name": "Scapular Wall Slides", "sets": "3", "reps": "12", "weight": "Bodyweight", "target": "Serratus Anterior" },
+      { "name": "Prone Y-T-W Dumbbell Raises", "sets": "3", "reps": "10", "weight": "3 kg", "target": "Lower Traps" }
+    ]
+  },
+  {
+    "id": "WK-007",
+    "planName": "Glute Sculpt & Lower Body Power",
+    "memberName": "Ritu Deshmukh",
+    "memberId": "FZ-2026-0010",
+    "trainerName": "Elena Rostova",
+    "duration": "50 mins",
+    "difficulty": "Intermediate",
+    "targetGoal": "Glutes, Quads & Lower Body Shape",
+    "exercises": [
+      { "name": "Barbell Romanian Deadlifts", "sets": "4", "reps": "10", "weight": "55 kg", "target": "Hamstrings/Glutes" },
+      { "name": "Bulgarian Split Squats", "sets": "3", "reps": "10 per leg", "weight": "12 kg DBs", "target": "Glutes/Quads" },
+      { "name": "Cable Glute Kickbacks", "sets": "4", "reps": "15", "weight": "15 kg", "target": "Gluteus Maximus" },
+      { "name": "Seated Abductor Machine", "sets": "3", "reps": "20", "weight": "40 kg", "target": "Glute Medius" }
+    ]
+  },
+  {
+    "id": "WK-008",
+    "planName": "Strength Peaking Barbell Squat Session",
+    "memberName": "Siddharth Mehta",
+    "memberId": "FZ-2026-0013",
+    "trainerName": "Marcus Vance",
+    "duration": "60 mins",
+    "difficulty": "Advanced",
+    "targetGoal": "Squat 1RM & Leg Power",
+    "exercises": [
+      { "name": "Barbell Low Bar Back Squat", "sets": "5", "reps": "3", "weight": "130 kg", "target": "Quads/Glutes/Spinal Erectors" },
+      { "name": "Leg Press Heavy Pyramids", "sets": "4", "reps": "8-10", "weight": "220 kg", "target": "Quads" },
+      { "name": "Walking Barbell Lunges", "sets": "3", "reps": "12 steps", "weight": "40 kg", "target": "Leg Unilateral Balance" },
+      { "name": "Standing Calf Raises", "sets": "4", "reps": "15", "weight": "70 kg", "target": "Calves" }
+    ]
+  },
+  {
+    "id": "WK-009",
+    "planName": "HIIT Tabata Full Body Burner",
+    "memberName": "Ananya Iyer",
+    "memberId": "FZ-2026-0004",
+    "trainerName": "Sarah Jenkins",
+    "duration": "35 mins",
+    "difficulty": "Intermediate",
+    "targetGoal": "Calorie Burn & Cardiovascular Endurance",
+    "exercises": [
+      { "name": "Battle Ropes Waves & Slams", "sets": "8 rounds", "reps": "20s work / 10s rest", "weight": "Standard Rope", "target": "Shoulders & Cardio" },
+      { "name": "Rowing Machine 250m Sprints", "sets": "5 rounds", "reps": "250m max pace", "weight": "Damper 7", "target": "Full Body Endurance" },
+      { "name": "Mountain Climbers & Plank Jacks", "sets": "4", "reps": "45s", "weight": "Bodyweight", "target": "Core & Cardio" },
+      { "name": "Dumbbell Thrusters", "sets": "4", "reps": "12", "weight": "8 kg DBs", "target": "Full Body" }
+    ]
+  },
+  {
+    "id": "WK-010",
+    "planName": "Executive Posture & Longevity Routine",
+    "memberName": "Devendra Rathore",
+    "memberId": "FZ-2026-0019",
+    "trainerName": "Devraj Singh",
+    "duration": "45 mins",
+    "difficulty": "Beginner",
+    "targetGoal": "Desk Worker Ergonomics & Joint Longevity",
+    "exercises": [
+      { "name": "Dead Hangs from Pull-Up Bar", "sets": "3", "reps": "45s", "weight": "Bodyweight", "target": "Shoulder Decompression" },
+      { "name": "Lat Pulldowns (Wide Neutral Grip)", "sets": "3", "reps": "12", "weight": "45 kg", "target": "Upper Back" },
+      { "name": "Farmer's Walks (Trap Bar / Dumbbells)", "sets": "3", "reps": "40 meters", "weight": "24 kg per hand", "target": "Grip & Core Stability" },
+      { "name": "Hamstring Doorway Stretches", "sets": "3", "reps": "60s per side", "weight": "Bodyweight", "target": "Hamstring Length" }
+    ]
+  }
+]

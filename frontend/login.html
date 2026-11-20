@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>FITZONE - Admin Authentication</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#ff5e14',
+            'primary-container': '#ff5e14',
+            'background': '#0b0e14',
+            'surface-container-lowest': '#0b0e14',
+            'surface-container-low': '#191c22',
+            'surface-container': '#1d2026',
+            'surface-container-high': '#272a31',
+            'surface-container-highest': '#32353c',
+            'on-surface': '#e1e2eb',
+            'on-surface-variant': '#e4beb2',
+            'outline': '#aa897e',
+            'outline-variant': '#5b4138',
+            'tertiary': '#4edea3',
+            'error': '#ffb4ab'
+          },
+          fontFamily: {
+            'sans': ['Inter', 'sans-serif'],
+            'display': ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="bg-surface-container-lowest text-on-surface min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+  <!-- Glowing energetic background orbs -->
+  <div class="absolute -top-40 -left-40 w-96 h-96 bg-primary/15 rounded-full blur-[120px] pointer-events-none"></div>
+  <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-primary/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+  <div class="w-full max-w-md relative z-10">
+    <!-- Brand Header -->
+    <div class="text-center mb-8">
+      <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary-container/20 border border-primary/40 mb-3 shadow-[0_0_24px_rgba(255,94,20,0.3)]">
+        <span class="material-symbols-outlined text-primary text-3xl">fitness_center</span>
+      </div>
+      <h1 class="font-display text-3xl font-extrabold tracking-tight text-on-surface">
+        <span class="text-primary">FITZONE</span> OS
+      </h1>
+      <p class="text-xs uppercase tracking-widest text-outline-variant mt-1 font-semibold">
+        GYM MEMBERSHIP MANAGEMENT SYSTEM
+      </p>
+    </div>
+
+    <!-- Login Card -->
+    <div class="bg-surface-container/90 backdrop-blur-xl border border-surface-container-high rounded-3xl p-8 shadow-2xl">
+      <div class="mb-6">
+        <h2 class="font-display text-xl font-bold text-on-surface">Admin Sign In</h2>
+        <p class="text-xs text-on-surface-variant mt-1">Enter your credentials to manage club operations</p>
+      </div>
+
+      <!-- Demo Credentials Banner -->
+      <div class="mb-6 p-4 rounded-2xl bg-surface-container-high/60 border border-primary/30 flex flex-col gap-2">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-primary flex items-center gap-1.5 uppercase tracking-wider">
+            <span class="material-symbols-outlined text-[16px]">key</span>
+            Demo Credentials
+          </span>
+          <button id="btn-autofill" type="button" class="text-[11px] font-bold text-tertiary hover:underline flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px]">auto_fix_high</span>
+            Auto-fill
+          </button>
+        </div>
+        <div class="grid grid-cols-2 gap-2 text-xs text-on-surface-variant pt-1 font-mono">
+          <div><span class="text-outline">Email:</span> <span class="text-on-surface font-semibold">admin@fitzone.com</span></div>
+          <div><span class="text-outline">Pass:</span> <span class="text-on-surface font-semibold">Admin@123</span></div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form id="login-form" class="space-y-4">
+        <!-- Email Input -->
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-outline mb-1.5" for="email">Admin Email</label>
+          <div class="relative flex items-center">
+            <span class="material-symbols-outlined absolute left-3.5 text-outline-variant text-[20px]">mail</span>
+            <input id="email" type="email" required placeholder="admin@fitzone.com"
+              class="w-full bg-surface-container-lowest border border-surface-container-high focus:border-primary rounded-xl py-3 pl-10 pr-4 text-sm text-on-surface outline-none transition-colors placeholder:text-outline-variant/60"/>
+          </div>
+        </div>
+
+        <!-- Password Input -->
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-outline mb-1.5" for="password">Password</label>
+          <div class="relative flex items-center">
+            <span class="material-symbols-outlined absolute left-3.5 text-outline-variant text-[20px]">lock</span>
+            <input id="password" type="password" required placeholder="••••••••"
+              class="w-full bg-surface-container-lowest border border-surface-container-high focus:border-primary rounded-xl py-3 pl-10 pr-11 text-sm text-on-surface outline-none transition-colors placeholder:text-outline-variant/60"/>
+            <button id="btn-toggle-pass" type="button" class="absolute right-3.5 text-outline-variant hover:text-on-surface transition-colors" title="Show/Hide Password">
+              <span id="pass-icon" class="material-symbols-outlined text-[20px]">visibility</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Remember Me & Forgot Password -->
+        <div class="flex items-center justify-between text-xs pt-1">
+          <label class="flex items-center gap-2 cursor-pointer select-none">
+            <input id="remember-me" type="checkbox" checked class="w-4 h-4 rounded bg-surface-container-lowest border-surface-container-high text-primary focus:ring-0 focus:ring-offset-0 cursor-pointer"/>
+            <span class="text-on-surface-variant font-medium">Remember session</span>
+          </label>
+          <span class="text-outline-variant hover:text-primary transition-colors cursor-pointer" onclick="alert('For college demo, use the default password: Admin@123')">Demo Hint</span>
+        </div>
+
+        <!-- Submit Button -->
+        <button id="btn-submit" type="submit"
+          class="w-full py-3.5 px-4 bg-primary text-white font-display font-bold text-sm tracking-wide uppercase rounded-xl hover:bg-primary-dark transition-all shadow-[0_0_20px_rgba(255,94,20,0.4)] flex items-center justify-center gap-2 mt-4 cursor-pointer">
+          <span class="material-symbols-outlined text-[20px]">login</span>
+          <span id="submit-text">Launch Club Console</span>
+        </button>
+      </form>
+    </div>
+
+    <!-- Footer Tagline -->
+    <p class="text-center text-xs text-outline-variant mt-8">
+      FITZONE High-Performance Fitness Architecture • College Demonstration v1.0
+    </p>
+  </div>
+
+  <script type="module">
+    import { login, checkAuth } from './js/auth.js';
+    import { showToast } from './js/api.js';
+
+    // Check if already authenticated
+    checkAuth();
+
+    const form = document.getElementById('login-form');
+    const emailInput = document.getElementById('email');
+    const passInput = document.getElementById('password');
+    const rememberCheckbox = document.getElementById('remember-me');
+    const togglePassBtn = document.getElementById('btn-toggle-pass');
+    const passIcon = document.getElementById('pass-icon');
+    const autofillBtn = document.getElementById('btn-autofill');
+
+    // Show / Hide Password
+    togglePassBtn.addEventListener('click', () => {
+      const isPass = passInput.type === 'password';
+      passInput.type = isPass ? 'text' : 'password';
+      passIcon.textContent = isPass ? 'visibility_off' : 'visibility';
+    });
+
+    // Auto-fill Demo Credentials
+    autofillBtn.addEventListener('click', () => {
+      emailInput.value = 'admin@fitzone.com';
+      passInput.value = 'Admin@123';
+      showToast('Demo credentials auto-filled', 'info');
+    });
+
+    // Handle Login
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = document.getElementById('btn-submit');
+      const submitText = document.getElementById('submit-text');
+
+      submitBtn.disabled = true;
+      submitText.textContent = 'Verifying...';
+
+      const success = await login(emailInput.value.trim(), passInput.value, rememberCheckbox.checked);
+
+      if (!success) {
+        submitBtn.disabled = false;
+        submitText.textContent = 'Launch Club Console';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>FITZONE - Workout Plans & Regimens</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#ff5e14',
+            'primary-container': '#ff5e14',
+            'background': '#0b0e14',
+            'surface-container-lowest': '#0b0e14',
+            'surface-container-low': '#191c22',
+            'surface-container': '#1d2026',
+            'surface-container-high': '#272a31',
+            'surface-container-highest': '#32353c',
+            'surface-bright': '#363940',
+            'on-surface': '#e1e2eb',
+            'on-surface-variant': '#e4beb2',
+            'outline': '#aa897e',
+            'outline-variant': '#5b4138',
+            'tertiary': '#4edea3',
+            'error': '#ffb4ab',
+            'error-container': '#93000a'
+          },
+          fontFamily: {
+            'sans': ['Inter', 'sans-serif'],
+            'display': ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="bg-surface-container-lowest font-sans text-on-surface antialiased">
+
+  <!-- Sidebar -->
+  <aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-2xl border-r border-surface-container-high">
+    <div class="flex flex-col">
+      <a href="dashboard.html" class="h-16 px-4 flex items-center gap-3 bg-surface-container border-b border-surface-container-high">
+        <div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-white shadow-[0_0_12px_rgba(255,94,20,0.5)]">
+          <span class="material-symbols-outlined text-[22px]">fitness_center</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display text-lg font-extrabold tracking-tight text-on-surface">FITZONE</span>
+          <span class="text-[10px] text-outline-variant font-bold tracking-widest uppercase">GYM MANAGEMENT OS</span>
+        </div>
+      </a>
+
+      <div class="px-4 pt-5 pb-2">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-outline-variant">Core Operations</span>
+      </div>
+      <nav class="px-3 flex flex-col gap-1">
+        <a href="dashboard.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">dashboard</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="members.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[20px]">group</span>
+            <span>Members</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface text-[11px] font-bold">24</span>
+        </a>
+        <a href="memberships.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">card_membership</span>
+          <span>Memberships</span>
+        </a>
+        <a href="trainers.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">sports_gymnastics</span>
+          <span>Trainers</span>
+        </a>
+        <a href="attendance.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[20px]">fact_check</span>
+            <span>Attendance</span>
+          </div>
+          <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+        </a>
+        <a href="payments.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">payments</span>
+          <span>Payments</span>
+        </a>
+        <a href="workouts.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl font-display text-sm font-bold bg-surface-container-high text-primary shadow-[inset_3px_0_0_0_#ff5e14]">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[20px]">exercise</span>
+            <span>Workout Plans</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary text-[11px] font-bold" id="workouts-count-badge">--</span>
+        </a>
+        <a href="settings.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">settings</span>
+          <span>Settings</span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="p-4 bg-surface-container border-t border-surface-container-high">
+      <button id="sidebar-signout-btn" class="flex items-center gap-2.5 px-3 py-2 text-on-surface-variant hover:text-error transition-colors rounded-xl text-sm font-semibold w-full text-left">
+        <span class="material-symbols-outlined text-[20px]">logout</span>
+        <span>Sign Out</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Container -->
+  <div class="pl-64 min-h-screen flex flex-col">
+    <header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-low/95 backdrop-blur-xl z-40 flex items-center justify-between px-8 border-b border-surface-container-high">
+      <div class="text-sm font-display font-bold text-on-surface uppercase tracking-wider">
+        Workout Programming & Regimens
+      </div>
+      <button onclick="window.openAddModal()" class="flex items-center gap-2 px-4 py-2 bg-primary text-white font-display font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-primary-dark transition-all shadow-[0_0_16px_rgba(255,94,20,0.35)]">
+        <span class="material-symbols-outlined text-[18px]">add_task</span>
+        <span>Create Plan</span>
+      </button>
+    </header>
+
+    <main class="w-full pt-20 px-8 pb-12 flex-1">
+      <div class="max-w-[1720px] mx-auto space-y-6">
+
+        <!-- Top Header Card -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-surface-container p-6 rounded-3xl border border-surface-container-high shadow-xl">
+          <div>
+            <h1 class="font-display text-2xl font-extrabold text-on-surface">Periodized Workout Blueprints</h1>
+            <p class="text-xs text-outline-variant mt-0.5">Customize training splits, prescribed sets, target weights, reps, and supervise coaching progress</p>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-outline-variant font-mono bg-surface-container-lowest px-4 py-2 rounded-xl border border-surface-container-high">
+            <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            <span>Full athlete customization enabled</span>
+          </div>
+        </div>
+
+        <!-- Workouts Grid -->
+        <div id="workouts-grid-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Populated dynamically -->
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Create Workout Modal -->
+  <div id="add-workout-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-surface-container border border-surface-container-high rounded-3xl p-6 w-full max-w-2xl shadow-2xl relative max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-surface-container-high pb-4 mb-4">
+        <h3 class="font-display text-lg font-bold text-on-surface flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary">fitness_center</span>
+          Create Periodized Workout Plan
+        </h3>
+        <button onclick="window.closeAddModal()" class="text-outline-variant hover:text-on-surface">✕</button>
+      </div>
+
+      <form id="add-workout-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-outline uppercase tracking-wider mb-1">Plan Title *</label>
+          <input name="planName" type="text" required placeholder="e.g. Strength & Explosive Power" class="w-full bg-surface-container-lowest border border-surface-container-high focus:border-primary rounded-xl py-2.5 px-3 text-xs text-on-surface outline-none"/>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-outline uppercase tracking-wider mb-1">Target Athlete *</label>
+            <select id="workout-member-select" name="memberName" required class="w-full bg-surface-container-lowest border border-surface-container-high focus:border-primary rounded-xl py-2.5 px-3 text-xs text-on-surface outline-none">
+              <!-- Populated dynamically -->
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-outline uppercase tracking-wider mb-1">Supervising Coach *</label>
+            <select id="workout-trainer-select" name="trainerName" required class="w-full bg-surface-container-lowest border border-surface-container-high focus:border-primary rounded-xl py-2.5 px-3 text-xs text-on-surface outline-none">
+              <!-- Populated dynamically -->
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs font-semibold text-outline uppercase tracking-wider mb-1">Duration</label>
+            <input name="duration" type="text" value="60 mins" class="w-full bg-surface-container-lowest border border-surface-container-high focus:border-primary rounded-xl py-2.5 px-3 text-xs text-on-surface outline-none"/>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-outline uppercase tracking-wider mb-1">Difficulty</label>
+            <select name="difficulty" class="w-full bg-surface-container-lowest border border-surface-container-high focus:border-primary rounded-xl py-2.5 px-3 text-xs text-on-surface outline-none">
+              <option value="Beginner">Beginner</option>
+              <option value="Intermediate" selected>Intermediate</option>
+              <option value="Advanced">Advanced</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-outline uppercase tracking-wider mb-1">Target Goal</label>
+            <input name="targetGoal" type="text" value="Hypertrophy & Strength" class="w-full bg-surface-container-lowest border border-surface-container-high focus:border-primary rounded-xl py-2.5 px-3 text-xs text-on-surface outline-none"/>
+          </div>
+        </div>
+
+        <!-- Exercise List Builder -->
+        <div class="pt-2">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold text-outline uppercase tracking-wider">Prescribed Exercises</span>
+            <button type="button" onclick="window.addExerciseRow()" class="text-xs text-primary font-bold hover:underline flex items-center gap-1">
+              <span class="material-symbols-outlined text-[16px]">add</span> Add Row
+            </button>
+          </div>
+
+          <div id="exercise-rows-container" class="space-y-2">
+            <div class="exercise-row grid grid-cols-12 gap-2 bg-surface-container-lowest p-2 rounded-xl border border-surface-container-high items-center">
+              <input class="ex-name col-span-4 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Exercise Name" value="Barbell Squats"/>
+              <input class="ex-sets col-span-2 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Sets" value="4"/>
+              <input class="ex-reps col-span-2 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Reps" value="10"/>
+              <input class="ex-weight col-span-2 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Weight" value="80 kg"/>
+              <input class="ex-target col-span-2 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Target" value="Quads"/>
+            </div>
+            <div class="exercise-row grid grid-cols-12 gap-2 bg-surface-container-lowest p-2 rounded-xl border border-surface-container-high items-center">
+              <input class="ex-name col-span-4 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Exercise Name" value="Dumbbell Shoulder Press"/>
+              <input class="ex-sets col-span-2 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Sets" value="3"/>
+              <input class="ex-reps col-span-2 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Reps" value="12"/>
+              <input class="ex-weight col-span-2 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Weight" value="22 kg"/>
+              <input class="ex-target col-span-2 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Target" value="Deltoids"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 border-t border-surface-container-high flex items-center justify-end gap-3">
+          <button type="button" onclick="window.closeAddModal()" class="px-4 py-2.5 rounded-xl bg-surface-container-highest text-on-surface text-xs font-semibold hover:bg-surface-bright transition-colors">
+            Cancel
+          </button>
+          <button type="submit" class="px-5 py-2.5 rounded-xl bg-primary text-white text-xs font-bold font-display uppercase tracking-wider hover:bg-primary-dark transition-colors shadow-lg">
+            Save Regimen
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Routine Breakdown Modal -->
+  <div id="routine-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-surface-container border border-surface-container-high rounded-3xl p-6 w-full max-w-2xl shadow-2xl relative">
+      <div class="flex items-center justify-between border-b border-surface-container-high pb-4 mb-4">
+        <div>
+          <h3 id="routine-modal-title" class="font-display text-lg font-bold text-on-surface">Routine Breakdown</h3>
+          <p id="routine-modal-details" class="text-xs text-outline-variant mt-0.5">--</p>
+        </div>
+        <button onclick="document.getElementById('routine-modal').classList.add('hidden')" class="text-outline-variant hover:text-on-surface">✕</button>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left">
+          <thead>
+            <tr class="border-b border-surface-container-high bg-surface-container-low/60 text-xs font-bold uppercase tracking-wider text-outline">
+              <th class="py-2.5 px-3">#</th>
+              <th class="py-2.5 px-3">Exercise</th>
+              <th class="py-2.5 px-3">Sets</th>
+              <th class="py-2.5 px-3">Reps</th>
+              <th class="py-2.5 px-3">Weight</th>
+              <th class="py-2.5 px-3">Target Muscle</th>
+            </tr>
+          </thead>
+          <tbody id="routine-modal-tbody">
+            <!-- Populated dynamically -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pt-4 mt-4 border-t border-surface-container-high flex justify-end">
+        <button onclick="document.getElementById('routine-modal').classList.add('hidden')" class="px-5 py-2 rounded-xl bg-surface-container-highest text-xs font-bold text-on-surface hover:bg-surface-bright">
+          Close Routine
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initWorkouts } from './js/workouts.js';
+    import { logout } from './js/auth.js';
+
+    initWorkouts();
+    document.getElementById('sidebar-signout-btn').addEventListener('click', logout);
+
+    window.openAddModal = () => document.getElementById('add-workout-modal').classList.remove('hidden');
+    window.closeAddModal = () => document.getElementById('add-workout-modal').classList.add('hidden');
+
+    window.addExerciseRow = () => {
+      const container = document.getElementById('exercise-rows-container');
+      const div = document.createElement('div');
+      div.className = 'exercise-row grid grid-cols-12 gap-2 bg-surface-container-lowest p-2 rounded-xl border border-surface-container-high items-center';
+      div.innerHTML = `
+        <input class="ex-name col-span-4 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Exercise Name"/>
+        <input class="ex-sets col-span-2 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Sets" value="3"/>
+        <input class="ex-reps col-span-2 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Reps" value="12"/>
+        <input class="ex-weight col-span-2 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Weight" value="20 kg"/>
+        <input class="ex-target col-span-2 bg-transparent border-none text-xs text-on-surface outline-none placeholder:text-outline-variant" placeholder="Target" value="Core"/>
+      `;
+      container.appendChild(div);
+    };
+  </script>
+</body>
+</html>

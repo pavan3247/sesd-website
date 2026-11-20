@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>FITZONE - Executive Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'primary': '#ff5e14',
+            'primary-container': '#ff5e14',
+            'on-primary-container': '#541800',
+            'primary-fixed-dim': '#ffb59b',
+            'background': '#0b0e14',
+            'surface-container-lowest': '#0b0e14',
+            'surface-container-low': '#191c22',
+            'surface-container': '#1d2026',
+            'surface-container-high': '#272a31',
+            'surface-container-highest': '#32353c',
+            'surface-bright': '#363940',
+            'on-surface': '#e1e2eb',
+            'on-surface-variant': '#e4beb2',
+            'outline': '#aa897e',
+            'outline-variant': '#5b4138',
+            'tertiary': '#4edea3',
+            'tertiary-container': '#00a874',
+            'secondary': '#adc6ff',
+            'secondary-container': '#0566d9',
+            'error': '#ffb4ab',
+            'error-container': '#93000a'
+          },
+          fontFamily: {
+            'sans': ['Inter', 'sans-serif'],
+            'display': ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="bg-surface-container-lowest font-sans text-on-surface antialiased">
+
+  <!-- Sidebar -->
+  <aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-2xl border-r border-surface-container-high">
+    <div class="flex flex-col">
+      <!-- Brand Logo -->
+      <a href="dashboard.html" class="h-16 px-4 flex items-center gap-3 bg-surface-container border-b border-surface-container-high">
+        <div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-white shadow-[0_0_12px_rgba(255,94,20,0.5)]">
+          <span class="material-symbols-outlined text-[22px]">fitness_center</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display text-lg font-extrabold tracking-tight text-on-surface">FITZONE</span>
+          <span class="text-[10px] text-outline-variant font-bold tracking-widest uppercase">GYM MANAGEMENT OS</span>
+        </div>
+      </a>
+
+      <!-- Navigation Section -->
+      <div class="px-4 pt-5 pb-2">
+        <span class="text-[11px] font-bold uppercase tracking-wider text-outline-variant">Core Operations</span>
+      </div>
+      <nav class="px-3 flex flex-col gap-1">
+        <a href="dashboard.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl font-display text-sm font-bold bg-surface-container-high text-primary shadow-[inset_3px_0_0_0_#ff5e14]">
+          <span class="material-symbols-outlined text-[20px]">dashboard</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="members.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[20px]">group</span>
+            <span>Members</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface text-[11px] font-bold" id="sidebar-members-badge">24</span>
+        </a>
+        <a href="memberships.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">card_membership</span>
+          <span>Memberships</span>
+        </a>
+        <a href="trainers.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">sports_gymnastics</span>
+          <span>Trainers</span>
+        </a>
+        <a href="attendance.html" class="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-[20px]">fact_check</span>
+            <span>Attendance</span>
+          </div>
+          <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+        </a>
+        <a href="payments.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">payments</span>
+          <span>Payments</span>
+        </a>
+        <a href="workouts.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">exercise</span>
+          <span>Workout Plans</span>
+        </a>
+        <a href="settings.html" class="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors">
+          <span class="material-symbols-outlined text-[20px]">settings</span>
+          <span>Settings</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Sidebar Bottom: Capacity Gauge & Sign Out -->
+    <div class="p-4 bg-surface-container border-t border-surface-container-high flex flex-col gap-3">
+      <div class="bg-surface-container-high p-3 rounded-xl border border-surface-container-highest">
+        <div class="flex items-center justify-between mb-1.5">
+          <span class="text-[11px] font-bold text-on-surface-variant uppercase tracking-wider">Club Capacity</span>
+          <span class="text-xs font-bold text-tertiary sidebar-capacity-pct">--%</span>
+        </div>
+        <div class="w-full h-2 bg-surface-container-lowest rounded-full overflow-hidden mb-1.5">
+          <div class="h-full bg-primary rounded-full transition-all duration-500 sidebar-capacity-bar" style="width: 25%"></div>
+        </div>
+        <div class="flex items-center justify-between text-[11px] text-outline-variant">
+          <span class="sidebar-capacity-text">-- / 200 Inside</span>
+          <span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+        </div>
+      </div>
+
+      <button id="sidebar-signout-btn" class="flex items-center gap-2.5 px-3 py-2 text-on-surface-variant hover:text-error transition-colors rounded-xl text-sm font-semibold w-full text-left">
+        <span class="material-symbols-outlined text-[20px]">logout</span>
+        <span>Sign Out</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Container -->
+  <div class="pl-64 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-low/95 backdrop-blur-xl z-40 flex items-center justify-between px-8 border-b border-surface-container-high">
+      <div class="flex items-center gap-4">
+        <!-- Search -->
+        <div class="flex items-center gap-2.5 bg-surface-container-lowest px-4 py-2 rounded-xl w-80 text-on-surface-variant border border-surface-container-high">
+          <span class="material-symbols-outlined text-[18px]">search</span>
+          <input id="global-search" type="text" placeholder="Search athlete, RFID, plan..." class="bg-transparent w-full text-xs text-on-surface outline-none placeholder:text-outline-variant"/>
+          <kbd class="text-[10px] bg-surface-container px-1.5 py-0.5 rounded text-outline font-mono">⌘K</kbd>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <!-- Peak Status -->
+        <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-surface-container rounded-full border border-surface-container-high">
+          <span class="w-2 h-2 rounded-full bg-tertiary"></span>
+          <span class="text-xs font-bold text-on-surface uppercase tracking-wide">Live • Prime Hours</span>
+        </div>
+
+        <!-- Rapid Check-in Button -->
+        <button id="btn-open-checkin" class="flex items-center gap-1.5 px-4 py-2 bg-primary text-white font-display font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-primary-dark transition-all shadow-[0_0_16px_rgba(255,94,20,0.35)]">
+          <span class="material-symbols-outlined text-[18px]">how_to_reg</span>
+          <span>Check-in Athlete</span>
+        </button>
+
+        <!-- Admin Profile Pill -->
+        <div class="flex items-center gap-2.5 bg-surface-container py-1.5 px-3 rounded-xl border border-surface-container-high">
+          <div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center font-bold text-xs text-white">
+            M
+          </div>
+          <div class="flex flex-col text-left">
+            <span class="font-display text-xs font-bold text-on-surface leading-tight">Marcus Vance</span>
+            <span class="text-[10px] text-outline-variant font-medium">Head Administrator</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="w-full pt-20 px-8 pb-12 flex-1">
+      <div class="max-w-[1720px] mx-auto space-y-6">
+
+        <!-- Top Welcome Banner -->
+        <div class="relative overflow-hidden rounded-3xl bg-surface-container p-8 border border-surface-container-high shadow-xl">
+          <div class="absolute -right-20 -top-20 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="relative z-10 flex flex-col xl:flex-row xl:items-center justify-between gap-6">
+            <div>
+              <div class="flex items-center gap-2 mb-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-tertiary text-xs font-bold uppercase tracking-wider border border-tertiary/20">
+                  <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+                  Club Intelligence Active
+                </span>
+                <span class="text-xs text-outline-variant">• FITZONE Downtown Center</span>
+              </div>
+              <h1 class="font-display text-3xl font-extrabold text-on-surface tracking-tight">
+                Welcome back, Marcus. Here's your club's live pulse today.
+              </h1>
+              <p class="text-sm text-on-surface-variant max-w-2xl mt-1">
+                Real-time throughput is steady. Manage members, record dues, track daily turnstile attendance, and review performance analytics.
+              </p>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div class="flex items-center flex-wrap gap-2.5">
+              <a href="members.html" class="inline-flex items-center gap-2 px-4 py-2.5 bg-primary text-white font-display font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-primary-dark transition-all shadow-[0_0_16px_rgba(255,94,20,0.35)]">
+                <span class="material-symbols-outlined text-[18px]">person_add</span>
+                <span>New Member</span>
+              </a>
+              <button onclick="document.getElementById('btn-open-checkin').click()" class="inline-flex items-center gap-2 px-4 py-2.5 bg-surface-container-high text-on-surface font-display font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-surface-bright transition-colors border border-surface-container-highest">
+                <span class="material-symbols-outlined text-[18px] text-tertiary">contactless</span>
+                <span>Rapid Check-in</span>
+              </button>
+              <a href="payments.html" class="inline-flex items-center gap-2 px-4 py-2.5 bg-surface-container-high text-on-surface font-display font-bold text-xs uppercase tracking-wider rounded-xl hover:bg-surface-bright transition-colors border border-surface-container-highest">
+                <span class="material-symbols-outlined text-[18px]">receipt_long</span>
+                <span>Record Payment</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 Primary Metric Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+          <!-- Metric 1: Total Members -->
+          <div class="bg-surface-container p-5 rounded-2xl border border-surface-container-high flex flex-col justify-between hover:bg-surface-container-high/60 transition-colors">
+            <div class="flex items-center justify-between text-outline-variant">
+              <span class="text-xs font-bold uppercase tracking-wider">Total Members</span>
+              <span class="p-1.5 rounded-lg bg-surface-container-highest text-primary">
+                <span class="material-symbols-outlined text-[18px]">badge</span>
+              </span>
+            </div>
+            <div class="my-3">
+              <div id="stat-total-members" class="font-display text-3xl font-extrabold text-on-surface tracking-tight">--</div>
+              <div class="flex items-center gap-1.5 mt-1 text-xs text-tertiary font-bold">
+                <span class="material-symbols-outlined text-[14px]">trending_up</span>
+                <span>+12.4% vs last mo</span>
+              </div>
+            </div>
+            <div class="text-[11px] text-outline-variant pt-2 border-t border-surface-container-high/60">
+              Active registered database
+            </div>
+          </div>
+
+          <!-- Metric 2: Active Members -->
+          <div class="bg-surface-container p-5 rounded-2xl border border-surface-container-high flex flex-col justify-between hover:bg-surface-container-high/60 transition-colors">
+            <div class="flex items-center justify-between text-outline-variant">
+              <span class="text-xs font-bold uppercase tracking-wider">Active Status</span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-tertiary-container/30 text-tertiary">Healthy</span>
+            </div>
+            <div class="my-3">
+              <div id="stat-active-members" class="font-display text-3xl font-extrabold text-tertiary tracking-tight">--</div>
+              <div class="text-xs text-outline-variant mt-1">Paid & in good standing</div>
+            </div>
+            <div class="text-[11px] text-outline-variant pt-2 border-t border-surface-container-high/60">
+              High member retention
+            </div>
+          </div>
+
+          <!-- Metric 3: Expired / Expiring -->
+          <div class="bg-surface-container p-5 rounded-2xl border border-surface-container-high flex flex-col justify-between hover:bg-surface-container-high/60 transition-colors">
+            <div class="flex items-center justify-between text-outline-variant">
+              <span class="text-xs font-bold uppercase tracking-wider">Expired</span>
+              <span class="p-1.5 rounded-lg bg-error-container/30 text-error">
+                <span class="material-symbols-outlined text-[18px]">warning</span>
+              </span>
+            </div>
+            <div class="my-3">
+              <div id="stat-expired-members" class="font-display text-3xl font-extrabold text-error tracking-tight">--</div>
+              <div id="stat-expiring-soon" class="text-xs text-primary font-bold mt-1">-- urgent (&lt;7d)</div>
+            </div>
+            <a href="members.html?status=Expired" class="text-[11px] text-primary hover:underline font-bold pt-2 border-t border-surface-container-high/60">
+              Review Renewal Queue →
+            </a>
+          </div>
+
+          <!-- Metric 4: Coaches on Floor -->
+          <div class="bg-surface-container p-5 rounded-2xl border border-surface-container-high flex flex-col justify-between hover:bg-surface-container-high/60 transition-colors">
+            <div class="flex items-center justify-between text-outline-variant">
+              <span class="text-xs font-bold uppercase tracking-wider">Total Trainers</span>
+              <span class="p-1.5 rounded-lg bg-surface-container-highest text-secondary">
+                <span class="material-symbols-outlined text-[18px]">sports_gymnastics</span>
+              </span>
+            </div>
+            <div class="my-3">
+              <div id="stat-total-trainers" class="font-display text-3xl font-extrabold text-on-surface tracking-tight">--</div>
+              <div class="text-xs text-secondary font-bold mt-1">Full floor coverage</div>
+            </div>
+            <a href="trainers.html" class="text-[11px] text-outline hover:text-on-surface font-semibold pt-2 border-t border-surface-container-high/60">
+              View Coach Roster →
+            </a>
+          </div>
+
+          <!-- Metric 5: Monthly Revenue -->
+          <div class="bg-surface-container p-5 rounded-2xl border border-surface-container-high flex flex-col justify-between hover:bg-surface-container-high/60 transition-colors">
+            <div class="flex items-center justify-between text-outline-variant">
+              <span class="text-xs font-bold uppercase tracking-wider">Month Revenue</span>
+              <span class="p-1.5 rounded-lg bg-primary-container/20 text-primary">
+                <span class="material-symbols-outlined text-[18px]">currency_rupee</span>
+              </span>
+            </div>
+            <div class="my-3">
+              <div id="stat-monthly-revenue" class="font-display text-3xl font-extrabold text-primary tracking-tight">₹--</div>
+              <div class="text-xs text-tertiary font-bold mt-1">+15.8% MoM</div>
+            </div>
+            <div class="text-[11px] text-outline-variant pt-2 border-t border-surface-container-high/60">
+              November Gross Collections
+            </div>
+          </div>
+
+          <!-- Metric 6: Today's Attendance -->
+          <div class="bg-surface-container p-5 rounded-2xl border border-surface-container-high flex flex-col justify-between hover:bg-surface-container-high/60 transition-colors">
+            <div class="flex items-center justify-between text-outline-variant">
+              <span class="text-xs font-bold uppercase tracking-wider">Today Attendance</span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-tertiary-container/30 text-tertiary flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span> Live
+              </span>
+            </div>
+            <div class="my-3">
+              <div id="stat-today-attendance" class="font-display text-3xl font-extrabold text-on-surface tracking-tight">--</div>
+              <div id="stat-inside-now" class="text-xs text-tertiary font-bold mt-1">-- inside now</div>
+            </div>
+            <a href="attendance.html" class="text-[11px] text-outline hover:text-on-surface font-semibold pt-2 border-t border-surface-container-high/60">
+              Live Turnstile Logs →
+            </a>
+          </div>
+        </div>
+
+        <!-- Charts Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Left: Revenue Chart (7 cols) -->
+          <div class="lg:col-span-7 bg-surface-container rounded-3xl p-6 border border-surface-container-high shadow-xl flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <div class="flex items-center gap-2">
+                  <h2 class="font-display text-lg font-bold text-on-surface">Revenue Velocity (Last 6 Months)</h2>
+                  <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-surface-container-high text-primary">INR ₹</span>
+                </div>
+                <p class="text-xs text-outline-variant">Gross membership fees and renewals collected</p>
+              </div>
+            </div>
+            <div class="relative w-full h-72">
+              <canvas id="revenueChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Right: Membership Growth Chart (5 cols) -->
+          <div class="lg:col-span-5 bg-surface-container rounded-3xl p-6 border border-surface-container-high shadow-xl flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <h2 class="font-display text-lg font-bold text-on-surface">New Member Sign-ups</h2>
+                <p class="text-xs text-outline-variant">Monthly athlete onboarding rate</p>
+              </div>
+              <span class="px-2.5 py-1 rounded-full bg-tertiary-container/20 text-tertiary text-xs font-bold">
+                Organic Growth
+              </span>
+            </div>
+            <div class="relative w-full h-72">
+              <canvas id="growthChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Activity Tables (Registrations & Payments) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          <!-- Recent Registrations (7 cols) -->
+          <div class="lg:col-span-7 bg-surface-container rounded-3xl p-6 border border-surface-container-high shadow-xl">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <h3 class="font-display text-base font-bold text-on-surface">Recent Athlete Registrations</h3>
+                <p class="text-xs text-outline-variant">Latest enrolled club members</p>
+              </div>
+              <a href="members.html" class="text-xs text-primary font-bold hover:underline">View All Members →</a>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left">
+                <thead>
+                  <tr class="border-b border-surface-container-high text-xs uppercase text-outline">
+                    <th class="py-2.5 px-4">Athlete</th>
+                    <th class="py-2.5 px-4">Plan</th>
+                    <th class="py-2.5 px-4">Joined</th>
+                    <th class="py-2.5 px-4">Status</th>
+                  </tr>
+                </thead>
+                <tbody id="recent-registrations-tbody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Recent Payments (5 cols) -->
+          <div class="lg:col-span-5 bg-surface-container rounded-3xl p-6 border border-surface-container-high shadow-xl">
+            <div class="flex items-center justify-between mb-4">
+              <div>
+                <h3 class="font-display text-base font-bold text-on-surface">Recent Transactions</h3>
+                <p class="text-xs text-outline-variant">Latest subscription dues processed</p>
+              </div>
+              <a href="payments.html" class="text-xs text-primary font-bold hover:underline">All Payments →</a>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left">
+                <thead>
+                  <tr class="border-b border-surface-container-high text-xs uppercase text-outline">
+                    <th class="py-2.5 px-4">Athlete / ID</th>
+                    <th class="py-2.5 px-4">Amount</th>
+                    <th class="py-2.5 px-4">Mode</th>
+                    <th class="py-2.5 px-4">Date</th>
+                  </tr>
+                </thead>
+                <tbody id="recent-payments-tbody">
+                  <!-- Populated dynamically -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Quick Check-in Modal -->
+  <div id="quick-checkin-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-surface-container border border-surface-container-high rounded-3xl p-6 w-full max-w-md shadow-2xl relative">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="font-display text-lg font-bold text-on-surface flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary">how_to_reg</span>
+          Rapid Member Check-in
+        </h3>
+        <button onclick="document.getElementById('quick-checkin-modal').classList.add('hidden')" class="text-outline-variant hover:text-on-surface">✕</button>
+      </div>
+      <form id="quick-checkin-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-outline uppercase tracking-wider mb-1">Scan RFID or Enter Member ID / Name</label>
+          <input id="quick-checkin-input" type="text" required placeholder="e.g. FZ-2026-0001 or Vikram" class="w-full bg-surface-container-lowest border border-surface-container-high focus:border-primary rounded-xl py-3 px-4 text-sm text-on-surface outline-none"/>
+        </div>
+        <button type="submit" class="w-full py-3 bg-primary text-white font-display font-bold text-sm uppercase rounded-xl hover:bg-primary-dark transition-colors flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined text-[18px]">contactless</span>
+          Record Entry
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initDashboard } from './js/dashboard.js';
+    import { logout } from './js/auth.js';
+    import { apiRequest, showToast } from './js/api.js';
+
+    initDashboard();
+
+    document.getElementById('sidebar-signout-btn').addEventListener('click', logout);
+
+    // Quick Check-in Modal triggers
+    const checkinModal = document.getElementById('quick-checkin-modal');
+    document.getElementById('btn-open-checkin').addEventListener('click', () => {
+      checkinModal.classList.remove('hidden');
+      document.getElementById('quick-checkin-input').focus();
+    });
+
+    document.getElementById('quick-checkin-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const input = document.getElementById('quick-checkin-input');
+      const val = input.value.trim();
+      if (!val) return;
+
+      try {
+        const res = await apiRequest('/attendance/check-in', {
+          method: 'POST',
+          body: JSON.stringify({ memberIdentifier: val })
+        });
+        if (res.success) {
+          showToast(res.message, 'success');
+          input.value = '';
+          checkinModal.classList.add('hidden');
+          initDashboard();
+        }
+      } catch (err) {
+        showToast(err.message, 'error');
+      }
+    });
+  </script>
+</body>
+</html>

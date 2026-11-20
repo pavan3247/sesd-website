@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap');
+
+:root {
+  --primary: #ff5e14;
+  --primary-dark: #e04e0b;
+  --bg-dark: #0b0e14;
+  --surface-low: #191c22;
+  --surface: #1d2026;
+  --surface-high: #272a31;
+  --surface-highest: #32353c;
+  --text-primary: #e1e2eb;
+  --text-muted: #aa897e;
+  --tertiary: #4edea3;
+  --error: #ffb4ab;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-headline, .font-metric {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Custom sleek scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #10131a;
+}
+::-webkit-scrollbar-thumb {
+  background: #272a31;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5e14;
+}
+
+/* Material symbols outlined base */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* Print Styles for Tax Receipts */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #receipt-modal-content, #receipt-modal-content * {
+    visibility: visible;
+  }
+  #receipt-modal-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    background: white !important;
+    color: black !important;
+  }
+  #receipt-modal {
+    position: static;
+    background: none !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

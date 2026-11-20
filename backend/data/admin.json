@@ -1,0 +1,11 @@
+{
+  "email": "admin@fitzone.com",
+  "password": "Admin@123",
+  "name": "Marcus Vance",
+  "role": "General Manager / Head Admin",
+  "phone": "+91 98765 43210",
+  "gymName": "FITZONE Fitness & Gym OS",
+  "address": "Plot 42, Cyber Gateway Avenue, Tech Zone, Hyderabad, 500081",
+  "capacity": 200,
+  "currency": "₹"
+}

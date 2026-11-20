@@ -1,0 +1,67 @@
+[
+  {
+    "id": "PLAN-001",
+    "name": "Basic",
+    "duration": "1 Month",
+    "durationDays": 30,
+    "price": 999,
+    "description": "Essential access to the gym floor, locker rooms, and standard cardio equipment.",
+    "features": [
+      "Access to Gym Floor & Cardio Zone",
+      "Locker & Shower Facility",
+      "Standard Workout Induction",
+      "Free Water Station Access"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "PLAN-002",
+    "name": "Standard",
+    "duration": "3 Months",
+    "durationDays": 90,
+    "price": 2499,
+    "description": "Comprehensive fitness plan with periodic assessments and steam bath privileges.",
+    "features": [
+      "All Basic Plan Benefits",
+      "1 Free Biometric Fitness Assessment",
+      "Steam & Sauna Room Access",
+      "Access to Weekend Group Yoga/HIIT",
+      "10% Discount on FITZONE Protein Shakes"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "PLAN-003",
+    "name": "Premium",
+    "duration": "6 Months",
+    "durationDays": 180,
+    "price": 4499,
+    "description": "Peak fitness package including personal trainer sessions and customized meal blueprints.",
+    "features": [
+      "All Standard Plan Benefits",
+      "2 Dedicated 1-on-1 Personal Training Sessions",
+      "Customized Nutrition & Macro Blueprint",
+      "Priority Locker Allocation",
+      "Unlimited Weekend Guest Passes (1/mo)",
+      "Free FITZONE Athlete Shaker Bottle"
+    ],
+    "status": "Active"
+  },
+  {
+    "id": "PLAN-004",
+    "name": "VIP Elite",
+    "duration": "12 Months",
+    "durationDays": 365,
+    "price": 7999,
+    "description": "The ultimate transformation experience with 24/7 access, personal coaching, and VIP perks.",
+    "features": [
+      "All Premium Plan Benefits",
+      "6 1-on-1 Coach Sessions with Head Trainer",
+      "Monthly InBody Body Composition Scans",
+      "Permanent Reserved Locker & Towel Service",
+      "Complimentary Sports Massage Consultation",
+      "Unlimited Group Spin & CrossFit Classes"
+    ],
+    "status": "Active"
+  }
+]
