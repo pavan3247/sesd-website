@@ -19,14 +19,20 @@ router.post('/', (req, res) => {
   const plans = readData('memberships.json');
   const newId = `PLAN-${String(plans.length + 1).padStart(3, '0')}`;
 
+  const featureList = Array.isArray(features)
+    ? features
+    : (typeof features === 'string'
+        ? features.split(/\r?\n|,/).map(f => f.trim()).filter(Boolean)
+        : []);
+
   const newPlan = {
     id: newId,
     name: name.trim(),
     duration: duration.trim(),
     durationDays: Number(durationDays) || 30,
     price: Number(price),
-    description: description || '',
-    features: Array.isArray(features) ? features : (features ? features.split(',').map(f => f.trim()) : []),
+    description: description ? description.trim() : '',
+    features: featureList,
     status: 'Active'
   };
 
@@ -51,8 +57,16 @@ router.put('/:id', (req, res) => {
     id: plans[index].id
   };
 
-  if (req.body.price) updated.price = Number(req.body.price);
-  if (req.body.durationDays) updated.durationDays = Number(req.body.durationDays);
+  if (req.body.price !== undefined) updated.price = Number(req.body.price);
+  if (req.body.durationDays !== undefined) updated.durationDays = Number(req.body.durationDays);
+
+  if (req.body.features !== undefined) {
+    updated.features = Array.isArray(req.body.features)
+      ? req.body.features
+      : (typeof req.body.features === 'string'
+          ? req.body.features.split(/\r?\n|,/).map(f => f.trim()).filter(Boolean)
+          : []);
+  }
 
   plans[index] = updated;
   writeData('memberships.json', plans);

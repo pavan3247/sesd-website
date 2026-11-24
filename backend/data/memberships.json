@@ -21,7 +21,13 @@
     "durationDays": 99,
     "price": 2499,
     "description": "Comprehensive fitness plan with periodic assessments and steam bath privileges.",
-    "features": "All Basic Plan Benefits\n1 Free Biometric Fitness Assessment\nSteam & Sauna Room Access\nAccess to Weekend Group Yoga/HIIT\n10% Discount on FITZONE Protein Shakes",
+    "features": [
+      "All Basic Plan Benefits",
+      "1 Free Biometric Fitness Assessment",
+      "Steam & Sauna Room Access",
+      "Access to Weekend Group Yoga/HIIT",
+      "10% Discount on FITZONE Protein Shakes"
+    ],
     "status": "Active"
   },
   {

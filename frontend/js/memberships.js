@@ -1,6 +1,17 @@
 import { apiRequest, showToast } from './api.js';
 import { checkAuth } from './auth.js';
 let allPlans = [];
+function getFeatures(planOrFeatures) {
+    const target = planOrFeatures && typeof planOrFeatures === 'object' && 'features' in planOrFeatures
+        ? planOrFeatures.features
+        : planOrFeatures;
+    if (Array.isArray(target))
+        return target;
+    if (typeof target === 'string') {
+        return target.split(/\r?\n|,/).map(s => s.trim()).filter(Boolean);
+    }
+    return [];
+}
 export async function initMemberships() {
     if (!checkAuth())
         return;
@@ -28,7 +39,7 @@ function renderPlansGrid(plans) {
         const popularBadge = isPopular
             ? '<span class="absolute -top-3 right-6 px-3 py-0.5 rounded-full text-xs font-bold bg-primary-container text-on-primary-container uppercase tracking-wider shadow-md">Most Popular</span>'
             : '';
-        const featuresList = (p.features || []).map(f => `
+        const featuresList = getFeatures(p.features).map(f => `
       <li class="flex items-start gap-2.5 text-sm text-on-surface-variant">
         <span class="material-symbols-outlined text-primary text-[18px] shrink-0 mt-0.5">check_circle</span>
         <span>${f}</span>
@@ -46,7 +57,7 @@ function renderPlansGrid(plans) {
           <div class="mb-6">
             <span class="text-xs text-outline-variant">Starting at</span>
             <div class="flex items-baseline gap-1">
-              <span class="font-metric-display text-4xl font-bold text-on-surface">₹${p.price.toLocaleString()}</span>
+              <span class="font-metric-display text-4xl font-bold text-on-surface">₹${Number(p.price).toLocaleString()}</span>
               <span class="text-xs text-outline-variant">/ ${p.duration}</span>
             </div>
           </div>
@@ -75,11 +86,19 @@ function setupEventListeners() {
     addForm?.addEventListener('submit', async (e) => {
         e.preventDefault();
         const formData = new FormData(addForm);
-        const payload = Object.fromEntries(formData.entries());
+        const raw = Object.fromEntries(formData.entries());
+        const cleanPayload = {
+            name: String(raw.name || '').trim(),
+            duration: String(raw.duration || '').trim(),
+            durationDays: Number(raw.durationDays) || 30,
+            price: Number(raw.price) || 0,
+            description: String(raw.description || '').trim(),
+            features: getFeatures(raw.features)
+        };
         try {
             const res = await apiRequest('/memberships', {
                 method: 'POST',
-                body: JSON.stringify(payload)
+                body: JSON.stringify(cleanPayload)
             });
             if (res.success) {
                 showToast('Membership plan created!', 'success');
@@ -97,11 +116,19 @@ function setupEventListeners() {
         e.preventDefault();
         const id = document.getElementById('edit-plan-id').value;
         const formData = new FormData(editForm);
-        const payload = Object.fromEntries(formData.entries());
+        const raw = Object.fromEntries(formData.entries());
+        const cleanPayload = {
+            name: String(raw.name || '').trim(),
+            duration: String(raw.duration || '').trim(),
+            durationDays: Number(raw.durationDays) || 30,
+            price: Number(raw.price) || 0,
+            description: String(raw.description || '').trim(),
+            features: getFeatures(raw.features)
+        };
         try {
             const res = await apiRequest(`/memberships/${id}`, {
                 method: 'PUT',
-                body: JSON.stringify(payload)
+                body: JSON.stringify(cleanPayload)
             });
             if (res.success) {
                 showToast('Membership plan updated!', 'success');
@@ -123,8 +150,8 @@ window.editPlan = (id) => {
     document.getElementById('edit-plan-duration').value = plan.duration;
     document.getElementById('edit-plan-days').value = String(plan.durationDays || 30);
     document.getElementById('edit-plan-price').value = String(plan.price);
-    document.getElementById('edit-plan-desc').value = plan.description;
-    document.getElementById('edit-plan-features').value = (plan.features || []).join('\n');
+    document.getElementById('edit-plan-desc').value = plan.description || '';
+    document.getElementById('edit-plan-features').value = getFeatures(plan.features).join('\n');
     document.getElementById('edit-plan-modal')?.classList.remove('hidden');
 };
 window.deletePlan = async (id, name) => {
