@@ -5,12 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FITZONE - Gym Membership Management System</title>
   <script>
-    const token = localStorage.getItem('fitzone_token') || sessionStorage.getItem('fitzone_token');
-    if (token) {
-      window.location.replace('dashboard.html');
-    } else {
-      window.location.replace('login.html');
-    }
+    window.location.replace('login.html');
   </script>
 </head>
 <body style="background:#0b0e14; color:#e1e2eb; display:flex; align-items:center; justify-content:center; height:100vh; font-family:sans-serif;">

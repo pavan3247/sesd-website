@@ -66,6 +66,17 @@
         <p class="text-xs text-on-surface-variant mt-1">Enter your credentials to manage club operations</p>
       </div>
 
+      <!-- Active Session Notice (hidden by default) -->
+      <div id="active-session-banner" class="hidden mb-4 p-3 rounded-2xl bg-tertiary/10 border border-tertiary/30 text-xs text-tertiary flex items-center justify-between">
+        <span class="flex items-center gap-1.5 font-semibold">
+          <span class="material-symbols-outlined text-[16px]">check_circle</span>
+          Active session detected
+        </span>
+        <a href="dashboard.html" class="font-bold underline hover:text-white transition-colors flex items-center gap-1">
+          Open Dashboard →
+        </a>
+      </div>
+
       <!-- Demo Credentials Banner -->
       <div class="mb-6 p-4 rounded-2xl bg-surface-container-high/60 border border-primary/30 flex flex-col gap-2">
         <div class="flex items-center justify-between">
@@ -134,11 +145,15 @@
   </div>
 
   <script type="module">
-    import { login, checkAuth } from './js/auth.js';
+    import { login, getAuthToken } from './js/auth.js';
     import { showToast } from './js/api.js';
 
-    // Check if already authenticated
-    checkAuth();
+    // Show indicator if user is already logged in
+    const activeToken = getAuthToken();
+    if (activeToken) {
+      const banner = document.getElementById('active-session-banner');
+      if (banner) banner.classList.remove('hidden');
+    }
 
     const form = document.getElementById('login-form');
     const emailInput = document.getElementById('email');

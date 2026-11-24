@@ -13,15 +13,12 @@ export function getCurrentUser() {
 }
 export function checkAuth() {
     const token = getAuthToken();
-    const isLoginPage = window.location.pathname.endsWith('login.html');
+    const isLoginPage = window.location.pathname.endsWith('login.html') || window.location.pathname === '/login';
     if (!token && !isLoginPage) {
         window.location.href = 'login.html';
         return false;
     }
-    if (token && isLoginPage) {
-        window.location.href = 'dashboard.html';
-        return true;
-    }
+    // Allow users to view and interact with login page without being auto-redirected away
     return !!token;
 }
 export function logout() {
